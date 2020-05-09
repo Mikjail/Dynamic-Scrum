@@ -1,0 +1,13 @@
+{
+  "artifact_product-backlog": "Product Backlog",
+  "artifact_sprint-backlog": "Sprint Backlog",
+  "artifact_increment": "Increment",
+  "values_commitment": "Commitment",
+  "values_courage": "Courage",
+  "values_focus": "Focus",
+  "values_opennes": "Opennes",
+  "values_respect": "Respect",
+  "roles_scrum-master": "Scrum Master",
+  "roles_product-owner": "Prduct Owner",
+  "roles_dev-team": "Dev Team"
+}

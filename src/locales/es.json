@@ -1,0 +1,13 @@
+{
+  "artifact_product-backlog": "Pila de Producto",
+  "artifact_sprint-backlog": "Pila de Sprint",
+  "artifact_increment": "Incremento",
+  "values_commitment": "Compromiso",
+  "values_courage": "Coraje",
+  "values_focus": "Foco",
+  "values_opennes": "Apertura",
+  "values_respect": "Respeto",
+  "roles_scrum-master": "Scrum Master",
+  "roles_product-owner": "Prop. del Product",
+  "roles_dev-team": "Eq. de Desarrollo"
+}
