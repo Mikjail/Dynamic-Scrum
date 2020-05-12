@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="268px" height="144px" viewBox="0 0 268 144" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page---Artifact" transform="translate(-810.000000, -53.000000)" fill="#137FFF" fill-rule="nonzero">
+            <g id="Avatar" transform="translate(620.000000, 16.000000)">
+                <g id="Message" transform="translate(180.000000, 0.000000)">
+                    <path d="M263,37 C271.284271,37 278,43.7157288 278,52 L278,160 C278,168.284271 271.284271,175 263,175 L61.577484,175 L14.4622024,180.480913 C12.2678611,180.73618 10.282061,179.16425 10.0267936,176.969909 C10.0089462,176.816488 10,176.662162 10,176.507706 L10,133 L10,52 C10,43.7157288 16.7157288,37 25,37 L263,37 Z" id="Combined-Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
