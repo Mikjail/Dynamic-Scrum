@@ -12,7 +12,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   background-image: url('assets/main-bg.svg');
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
