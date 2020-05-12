@@ -174,6 +174,10 @@ export default class AvatarTalkGuide extends Vue {
       text-align: justify;
       margin: 0;
       font-size: 15px;
+      width: 100%;
+      ul{
+        padding-left: 25px;
+      }
     }
   }
   &__img {

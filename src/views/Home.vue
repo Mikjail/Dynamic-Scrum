@@ -7,8 +7,9 @@
       <div class="d-flex flex-column align-items-center home__main-title">
         <h2
           @click="selectMenu(homeMenuType.SCRUM)"
-          :class="{ active: menuItem === homeMenuType.SCRUM }"
-        >Scrum</h2>
+          :class="{ active: menuItem === homeMenuType.SCRUM }">
+        Scrum
+        </h2>
         <div class="d-flex home__arrows">
           <img src="@/assets/arrow_left.svg" alt v-show="arrowActive === 'left'" />
           <img src="@/assets/arrow_center.svg" alt v-show="arrowActive === 'center'" />
@@ -21,24 +22,27 @@
             @mouseover="arrowActive = 'left'"
             @mouseleave="arrowActive = ''"
             :class="{ active: menuItem === homeMenuType.ARTIFACTS }"
-            @click="selectMenu(homeMenuType.ARTIFACTS)"
-          >Artifacts</h2>
+            @click="selectMenu(homeMenuType.ARTIFACTS)">
+            Artifacts
+            </h2>
         </div>
         <div class="home__main-menu__nav-item">
           <h2
             @mouseover="arrowActive = 'center'"
             @mouseleave="arrowActive = ''"
             @click="selectMenu(homeMenuType.VALUES)"
-            :class="{ active: menuItem === homeMenuType.VALUES }"
-          >Values</h2>
+            :class="{ active: menuItem === homeMenuType.VALUES }">
+            Values
+            </h2>
         </div>
         <div class="home__main-menu__nav-item">
           <h2
             @mouseover="arrowActive = 'right'"
             @mouseleave="arrowActive = ''"
             @click="selectMenu(homeMenuType.ROLES)"
-            :class="{ active: menuItem === homeMenuType.ROLES }"
-          >Roles</h2>
+            :class="{ active: menuItem === homeMenuType.ROLES }">
+            Roles
+            </h2>
         </div>
       </div>
     </div>
@@ -75,10 +79,19 @@ export default class Home extends Vue {
     [MssgeType.ARTIFACTS]: [
       'avatar_mssge_artifacts_one',
       'avatar_mssge_artifacts_two',
-      'avatar_mssge_artifacts_three'
+      'avatar_mssge_artifacts_three',
+      'avatar_mssge_learn_more'
     ],
-    [MssgeType.VALUES]: ['avatar_mssge_one'],
-    [MssgeType.ROLES]: ['avatar_mssge_one']
+    [MssgeType.VALUES]: [
+      'avatar_mssge_values_one',
+      'avatar_mssge_values_two',
+      'avatar_mssge_learn_more'],
+    [MssgeType.ROLES]: [
+      'avatar_mssge_roles_one',
+      'avatar_mssge_roles_two',
+      'avatar_mssge_roles_three',
+      'avatar_mssge_learn_more'
+    ]
   };
 
   selectMenu(menuItem: MssgeType) {
@@ -153,8 +166,7 @@ body {
     }
   }
 }
-.fade-enter-active,
-.fade-leave-active {
+.fade-enter-active {
   transition: opacity 0.5s;
 }
 .fade-enter,
