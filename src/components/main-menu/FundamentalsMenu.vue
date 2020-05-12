@@ -6,7 +6,8 @@
           :to="fundamental.route"
           class="artifact__menu__btn btn btn-outline-primary white"
           tag="button"
-        >{{ $t(fundamental.name) }}</router-link>
+          >{{ $t(fundamental.name) }}</router-link
+        >
       </div>
     </div>
   </div>
@@ -20,10 +21,6 @@ export default class FundamentalsMenu extends Vue {
   @Prop({ required: true }) menuItem!: FundamentalsEnum;
 
   fundamentalsType = FundamentalsEnum;
-
-  get fudamentalList() {
-    return this.fundamentals[this.menuItem];
-  }
 
   fundamentals: Fundamentals = {
     [this.fundamentalsType.ARTIFACTS]: [
@@ -44,22 +41,30 @@ export default class FundamentalsMenu extends Vue {
       { name: 'roles_dev-team', route: 'roles/devTeam' }
     ]
   };
+
+  get fudamentalList() {
+    return this.fundamentals[this.menuItem];
+  }
 }
 </script>
 <style lang="scss">
 .artifact {
   position: absolute;
-  height: 230px;
-  bottom: 0;
+  bottom: 5%;
   &__menu {
     flex-basis: 33.33%;
-    margin-top: 32px;
+    margin-top: 20px;
     &:nth-child(4) {
       margin-left: 16.65%;
     }
     &__btn {
       width: 176px;
     }
+  }
+}
+@media only screen and (min-height: 900px) {
+  .artifact {
+    bottom: 10%;
   }
 }
 </style>

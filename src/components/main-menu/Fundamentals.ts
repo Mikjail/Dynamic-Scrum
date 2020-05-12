@@ -11,7 +11,27 @@ export enum ArtifactsEnum {
 }
 
 export interface Fundamentals {
-  artifacts: Array<{ name: string; route: string }>;
-  values: Array<{ name: string; route: string }>;
-  roles: Array<{ name: string; route: string }>;
+  artifacts: Array<Message>;
+  values: Array<Message>;
+  roles: Array<Message>;
+}
+
+export enum MssgeType {
+  WELCOME = 'welcome',
+  SCRUM = 'scrum',
+  ARTIFACTS = 'artifacts',
+  VALUES = 'values',
+  ROLES = 'roles'
+}
+
+export interface Message {
+  name: string;
+  route: string;
+}
+
+export enum HomeMenuType {
+  SCRUM = 'scrum',
+  ARTIFACTS = 'artifacts',
+  VALUES = 'values',
+  ROLES = 'roles'
 }

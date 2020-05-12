@@ -9,5 +9,12 @@
   "values_respect": "Respect",
   "roles_scrum-master": "Scrum Master",
   "roles_product-owner": "Prduct Owner",
-  "roles_dev-team": "Dev Team"
+  "roles_dev-team": "Dev Team",
+  "avatar_mssge_welcome_one": "Hey, I’m the <strong>Scrum Master</strong>, my role is to coach and guide you to understand Scrum. Well, if you want to know more then <strong> click on any of the titles below! </strong>",
+  "avatar_mssge_scrum_one": "Scrum is a framework for developing, delivering, and sustaining complex products. This definition consists of Scrum’s <strong> roles, events, artifacts, </strong> and the <strong> rules </strong> that bind them together.",
+  "avatar_mssge_scrum_two": "Each component within the framework serves a specific purpose and is essential to Scrum’s success and usage.",
+  "avatar_mssge_scrum_three": "Scrum is: <br> <ul> <li>Lightweight</li><li>Simple to understand</li> <li>Difficult to master</li></ul>",
+  "avatar_mssge_artifacts_one": "Scrum’s <strong>artifacts</strong> represent work or value to provide transparency and opportunities for inspection and adaptation.",
+  "avatar_mssge_artifacts_two": "<strong>Artifacts</strong> defined by Scrum are specifically designed to maximize transparency of key information so that everybody has the same understanding of the artifact.",
+  "avatar_mssge_artifacts_three": "There are 3 artifacts, the <strong> Product Backlog, Sprint Backlog</strong> and the <strong> Increment </strong>. If you want to know about them, click on the buttons below!"
 }

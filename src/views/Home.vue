@@ -1,13 +1,14 @@
 <template>
   <div class="container home">
-    <div class="row d-flex justify-content-center align-items-end home__main-avatar">
-      <div class="d-flex justify-content-center align-items-center home__main-avatar__img">
-        <img src="@/assets/main/main-avatar.svg" alt />
-      </div>
+    <div class="home__avatar-talk">
+      <avatar-talk-guide :mssges="mssge[mssgeType]"></avatar-talk-guide>
     </div>
     <div class="row d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex flex-column align-items-center home__main-title">
-        <h2>Scrum</h2>
+        <h2
+          @click="selectMenu(homeMenuType.SCRUM)"
+          :class="{ active: menuItem === homeMenuType.SCRUM }"
+        >Scrum</h2>
         <div class="d-flex home__arrows">
           <img src="@/assets/arrow_left.svg" alt v-show="arrowActive === 'left'" />
           <img src="@/assets/arrow_center.svg" alt v-show="arrowActive === 'center'" />
@@ -19,24 +20,24 @@
           <h2
             @mouseover="arrowActive = 'left'"
             @mouseleave="arrowActive = ''"
-            :class="{ active: menuItem === fundamentalsType.ARTIFACTS }"
-            @click="selectMenu(fundamentalsType.ARTIFACTS)"
-          >Artifact</h2>
+            :class="{ active: menuItem === homeMenuType.ARTIFACTS }"
+            @click="selectMenu(homeMenuType.ARTIFACTS)"
+          >Artifacts</h2>
         </div>
         <div class="home__main-menu__nav-item">
           <h2
             @mouseover="arrowActive = 'center'"
             @mouseleave="arrowActive = ''"
-            @click="selectMenu(fundamentalsType.VALUES)"
-            :class="{ active: menuItem === fundamentalsType.VALUES }"
+            @click="selectMenu(homeMenuType.VALUES)"
+            :class="{ active: menuItem === homeMenuType.VALUES }"
           >Values</h2>
         </div>
         <div class="home__main-menu__nav-item">
           <h2
             @mouseover="arrowActive = 'right'"
             @mouseleave="arrowActive = ''"
-            @click="selectMenu(fundamentalsType.ROLES)"
-            :class="{ active: menuItem === fundamentalsType.ROLES }"
+            @click="selectMenu(homeMenuType.ROLES)"
+            :class="{ active: menuItem === homeMenuType.ROLES }"
           >Roles</h2>
         </div>
       </div>
@@ -50,22 +51,39 @@
 </template>
 <script lang="ts">
 import FundamentalsMenu from '@/components/main-menu/FundamentalsMenu.vue';
-import { FundamentalsEnum } from '@/components/main-menu/Fundamentals';
-import { Component, Vue } from 'vue-property-decorator';
-@Component({
-  components: {
-    FundamentalsMenu
-  }
-})
-export default class Home extends Vue {
-  fundamentalsType = FundamentalsEnum;
+import AvatarTalkGuide from '@/components/shared/AvatarTalkGuide.vue';
+import { HomeMenuType, MssgeType } from '@/components/main-menu/Fundamentals';
 
-  menuItem: string = FundamentalsEnum.ARTIFACTS;
+import { Component, Vue } from 'vue-property-decorator';
+@Component({ components: { FundamentalsMenu, AvatarTalkGuide } })
+export default class Home extends Vue {
+  homeMenuType = HomeMenuType;
+
+  menuItem = '';
 
   arrowActive = '';
 
-  selectMenu(menuItem: string) {
+  mssgeType = MssgeType.WELCOME;
+
+  mssge = {
+    [MssgeType.WELCOME]: ['avatar_mssge_welcome_one'],
+    [MssgeType.SCRUM]: [
+      'avatar_mssge_scrum_one',
+      'avatar_mssge_scrum_two',
+      'avatar_mssge_scrum_three'
+    ],
+    [MssgeType.ARTIFACTS]: [
+      'avatar_mssge_artifacts_one',
+      'avatar_mssge_artifacts_two',
+      'avatar_mssge_artifacts_three'
+    ],
+    [MssgeType.VALUES]: ['avatar_mssge_one'],
+    [MssgeType.ROLES]: ['avatar_mssge_one']
+  };
+
+  selectMenu(menuItem: MssgeType) {
     this.menuItem = '';
+    this.mssgeType = menuItem;
     setTimeout(() => {
       this.menuItem = menuItem;
     }, 100);
@@ -81,20 +99,21 @@ body {
 }
 .home {
   height: 100%;
-  &__main-avatar {
-    height: 30%;
-    &__img {
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      background: $primary-gradient;
-    }
+  &__avatar-talk {
+    padding-top: 16px;
   }
   &__main-title {
     width: 80%;
     h2 {
+      cursor: pointer;
       position: relative;
       top: 32px;
+      padding-bottom: 5px;
+      &.active {
+        border-bottom: 5px solid $secondary;
+        transition: 0.5s;
+        padding-bottom: 0;
+      }
     }
   }
   &__arrows {
@@ -134,12 +153,20 @@ body {
     }
   }
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter,
+.fade-leave-to {
   opacity: 0;
+}
+@media only screen and (min-height: 900px) {
+  .home {
+    height: 100%;
+    &__avatar-talk {
+      padding-top: 100px;
+    }
+  }
 }
 </style>

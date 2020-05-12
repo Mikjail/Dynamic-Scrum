@@ -9,5 +9,8 @@
   "values_respect": "Respeto",
   "roles_scrum-master": "Scrum Master",
   "roles_product-owner": "Prop. del Product",
-  "roles_dev-team": "Eq. de Desarrollo"
+  "roles_dev-team": "Eq. de Desarrollo",
+  "avatar_mssge_welcome": "Hey, Soy el Scrum Master, mi rol es entrenarte y guiarte para que entiendas Scrum!",
+  "avatar_mssge_one": "Scrum is a framework for developing, delivering, and sustaining complex products. This definition consists of Scrum’s <strong>roles, events, artifacts,</strong> and the rules that bind them together",
+  "avatar_mssge_two": "Well, that's a long introduction... If you wanna know more you can <strong>click</strong> on any of the items shown right now!"
 }
