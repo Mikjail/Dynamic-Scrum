@@ -2,8 +2,7 @@
   <div class="row d-flex flex-column align-items-center main-avatar">
     <div
       :class="bgTypeSelected"
-      class="d-flex flex-column justify-content-center align-items-center main-avatar__cloud-mssge"
-    >
+      class="d-flex flex-column justify-content-center align-items-center main-avatar__cloud-mssge">
       <transition name="fade">
         <p v-if="mssgeReady" v-html="$t(mssges[indexShowing])"></p>
       </transition>
@@ -11,22 +10,19 @@
         <button
           @click="backMssge"
           class="btn main-avatar__cloud-mssge__btns__back"
-          v-if="isBackAvailable"
-        >
+          v-if="isBackAvailable">
           Back
         </button>
         <button
           class="btn main-avatar__cloud-mssge__btns__next"
           @click="nextMssge"
-          v-if="isNextAvailable"
-        >
+          v-if="isNextAvailable">
           Next
         </button>
       </div>
       <div
         class="d-flex justify-content-center align-items-center main-avatar__typing"
-        v-if="!mssgeReady"
-      >
+        v-if="!mssgeReady">
         <typing-dots></typing-dots>
       </div>
     </div>
@@ -63,6 +59,8 @@ export default class AvatarTalkGuide extends Vue {
 
   lengthOfMessage = 0;
 
+  mssgeToSow = ''
+
   get isBackAvailable() {
     const currentIndex = this.indexShowing + 1;
     return currentIndex > 1;
@@ -80,16 +78,16 @@ export default class AvatarTalkGuide extends Vue {
 
   updated() {
     this.lengthOfMessage = this.mssges.length;
-    console.log('changed');
     this.showMssge();
   }
 
   showMssge() {
     const mssgeToshow = this.mssges[this.indexShowing];
-    if (this.mssges[this.indexShowing] && this.prevMssge !== mssgeToshow) {
-      this.prevMssge = mssgeToshow;
+    if (mssgeToshow && this.prevMssge !== mssgeToshow) {
       this.mssgeReady = false;
+      this.prevMssge = mssgeToshow;
       setTimeout(() => {
+        this.mssgeToSow = this.mssges[this.indexShowing];
         this.mssgeReady = true;
       }, 1000);
     }
@@ -116,7 +114,6 @@ export default class AvatarTalkGuide extends Vue {
 <style lang="scss">
 .main-avatar {
   &__cloud-mssge {
-    margin-left: 400px;
     padding: 5px 24px 10px;
     &__btns {
       width: 100%;
@@ -142,8 +139,8 @@ export default class AvatarTalkGuide extends Vue {
       }
     }
     &--frame {
-      height: 180px;
-      width: 350px;
+      height: 200px;
+      width: 420px;
       border-radius: 25px;
       padding-bottom: 40px;
       background-color: $primary;
@@ -151,16 +148,15 @@ export default class AvatarTalkGuide extends Vue {
       &:after {
         content: '';
         position: absolute;
-        bottom: 32px;
-        left: 24px;
+        bottom: 0;
+        left: 50%;
         width: 0;
         height: 0;
-        border: 45px solid transparent;
+        border: 25px solid transparent;
         border-top-color: $primary;
         border-bottom: 0;
-        border-left: 0;
-        margin-left: -24px;
-        margin-bottom: -55px;
+        margin-left: -25px;
+        margin-bottom: -25px;
       }
     }
     &--cloud {
@@ -183,7 +179,7 @@ export default class AvatarTalkGuide extends Vue {
   &__img {
     height: 170px;
     width: 170px;
-    margin-top: 24px;
+    margin-top: 48px;
     border-radius: 50%;
     background: $primary-gradient;
   }

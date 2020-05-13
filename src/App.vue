@@ -10,13 +10,10 @@
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-image: url('assets/main-bg.svg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-color: #ffff;
+}
+body{
+  height: 100%;
+  background: linear-gradient( white 80%, $primary 20%);
 }
 
 .btn-outline-primary {

@@ -1,4 +1,6 @@
 {
+  "avatar_mssge_learn_more": "<strong>If you want to know more then click on any of the buttons below!</strong>",
+  "avatar_mssge_learn_more-demo": "If you want to know more then click on the <strong>Demo</strong> button below!",
   "artifact_product-backlog": "Product Backlog",
   "artifact_sprint-backlog": "Sprint Backlog",
   "artifact_increment": "Increment",
@@ -22,5 +24,21 @@
   "avatar_mssge_roles_one": "The Scrum Team consist of a <strong>Product Owner</strong>., the <strong>Development Team</strong>, and a <strong>Scrum Master</strong>.",
   "avatar_mssge_roles_two": "<strong>Teams are self-organizing:</strong> Choose how best to accomplish their work, rather than being directed by others outside the team.",
   "avatar_mssge_roles_three": "<strong>Teams are cross-functional:</strong> Have all competencies needed to accomplish the work without depending on others not part of the team.",
-  "avatar_mssge_learn_more": "<strong>If you want to know more then click on any of the buttons below!</strong>"
+  "avatar_mssge_artifacts_backlog_one": "<strong>The Product Backlog </strong> is an ordered list of everything that is known to be needed in the product. It is the single source of requirements for any changes to be made to the product.",
+  "avatar_mssge_artifacts_backlog_two": "<strong>The Product Owner </strong> is responsible for the Product Backlog, including its content, availability, and ordering.",
+  "avatar_mssge_artifacts_sprintBacklog_one" : "<strong>The Sprint Backlog</strong> is the set of Product Backlog items selected for the Sprint, plus a plan for delivering the product Increment and realizing the <strong>Sprint Goal.</strong> ",
+  "avatar_mssge_artifacts_sprintBacklog_two" : "<strong>The Sprint Backlog</strong>  is a forecast by the Development Team about what functionality will be in the next Increment and the work needed to deliver that functionality into a \"Done\" Increment.",
+  "avatar_mssge_artifacts_increment_one": "<strong>The Increment</strong> is the sum of all the Product Backlog items completed during a Sprint and the value of the increments of all previous Sprints. At the end of a Sprint, the new Increment must be \"Done,\" which means it must be in useable condition and meet the Scrum Team’s definition of \"Done\".",
+  "avatar_mssge_values_commitment_one": "People personally commit to achieving the goals of the Scrum Team.",
+  "avatar_mssge_values_courage_one": "Scrum Team members have courage to do the right thing and work on tough problems.",
+  "avatar_mssge_values_opennes_one": "The Scrum team and its stakeholders agree to be open about all the work and challenges with performing work.",
+  "avatar_mssge_values_respect_one": "Scrum Team members respect each other to be capable, independent people.",
+  "avatar_mssge_values_focus_one": "Everyone focuses on the work of the Sprint and the goals of the Scrum Team.",
+  "avatar_mssge_roles_scrumMaster_one": "The </strong>Scrum Master</strong> is a servant-leader for the Scrum Team. The Scrum Master helps those outside the Scrum Team understand which of their interactions with the Scrum Team are helpful and which aren’t. The Scrum Master helps everyone change these interactions to maximize the value created by the Scrum Team.",
+  "avatar_mssge_roles_productOwner_one": "The Product Owner is responsible for maximizing the value of the product resulting from work of the Development Team. How this is done may vary widely across organizations, Scrum Teams, and individuals.",
+  "avatar_mssge_roles_productOwner_two":"The <strong>Product Owner</strong> is one person, not a committee. The Product Owner may represent the desires of a committee in the Product Backlog, but those wanting to change a Product Backlog item’s priority must address the Product Owner.",
+  "avatar_mssge_roles_productOwner_three":"The <strong>Product Owner</strong> is one person, not a committee. The Product Owner may represent the desires of a committee in the Product Backlog, but those wanting to change a Product Backlog item’s priority must address the Product Owner.",
+  "avatar_mssge_roles_devTeam_one": "The <strong>Development Team</strong> consists of professionals who do the work of delivering a potentially releasable Increment of \"Done\" product at the end of each Sprint. A \"Done\" increment is required at the Sprint Review. Only members of the Development Team create the Increment.",
+  "avatar_mssge_roles_devTeam_two": "<strong>Development Teams</strong> are structured and empowered by the organization to organize and manage their own work. The resulting synergy optimizes the Development Team’s overall efficiency and effectiveness."
+
 }

@@ -1,20 +1,19 @@
 <template>
   <div class="artifact container">
-    <div class="row d-flex">
-      <div class="artifact__menu" v-for="fundamental in fudamentalList" :key="fundamental.name">
-        <router-link
-          :to="fundamental.route"
-          class="artifact__menu__btn btn btn-outline-primary white"
-          tag="button"
-          >{{ $t(fundamental.name) }}</router-link
-        >
-      </div>
+    <div class="row d-flex justify-content-around">
+      <h2 class="artifact__menu"
+      @click="subItemSelected(fundamental)"
+       v-for="fundamental in fudamentalList" :key="fundamental.name">
+        {{ $t(fundamental.name) }}
+      </h2>
     </div>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import { FundamentalsEnum, Fundamentals } from './Fundamentals';
+import {
+  FundamentalsEnum, Fundamentals, SubItem, MssgeType
+} from './Fundamentals';
 
 @Component
 export default class FundamentalsMenu extends Vue {
@@ -24,23 +23,28 @@ export default class FundamentalsMenu extends Vue {
 
   fundamentals: Fundamentals = {
     [this.fundamentalsType.ARTIFACTS]: [
-      { name: 'artifact_product-backlog', route: 'artifacts/productBacklog' },
-      { name: 'artifact_sprint-backlog', route: 'artifacts/sprintBacklog' },
-      { name: 'artifact_increment', route: 'artifacts/increment' }
+      { name: MssgeType.ARTIFACT_PROD_BACKLOG },
+      { name: MssgeType.ARTIFACT_SPRINT_BACKLOG },
+      { name: MssgeType.ARTIFACT_INCREMENT }
     ],
     [this.fundamentalsType.VALUES]: [
-      { name: 'values_commitment', route: 'values/commitment' },
-      { name: 'values_courage', route: 'values/courage' },
-      { name: 'values_focus', route: 'values/focus' },
-      { name: 'values_opennes', route: 'values/opennes' },
-      { name: 'values_respect', route: 'values/respect' }
+      { name: MssgeType.VALUES_COMMITMENT },
+      { name: MssgeType.VALUES_COURAGE },
+      { name: MssgeType.VALUES_OPENNES },
+      { name: MssgeType.VALUES_RESPECT },
+      { name: MssgeType.VALUES_FOCUS }
+
     ],
     [this.fundamentalsType.ROLES]: [
-      { name: 'roles_scrum-master', route: 'roles/scrumMaster' },
-      { name: 'roles_product-owner', route: 'roles/productOwner' },
-      { name: 'roles_dev-team', route: 'roles/devTeam' }
+      { name: MssgeType.ROLES_SCRUM_MASTER },
+      { name: MssgeType.ROLES_PROD_OWNER },
+      { name: MssgeType.ROLES_DEV_TEAM }
     ]
   };
+
+  subItemSelected(item: SubItem) {
+    this.$emit('subItemSelected', item);
+  }
 
   get fudamentalList() {
     return this.fundamentals[this.menuItem];
@@ -52,13 +56,17 @@ export default class FundamentalsMenu extends Vue {
   position: absolute;
   bottom: 5%;
   &__menu {
-    flex-basis: 33.33%;
+    color: white;
     margin-top: 20px;
-    &:nth-child(4) {
-      margin-left: 16.65%;
+    padding-bottom: 5px;
+    cursor: pointer;
+    &:hover{
+        border-bottom: 5px solid white;
+        padding-bottom: 0px;
+        transition: 0.5s;
     }
-    &__btn {
-      width: 176px;
+    &:nth-child(5){
+      text-align: left;
     }
   }
 }

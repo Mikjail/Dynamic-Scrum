@@ -48,7 +48,10 @@
     </div>
     <div class="row">
       <transition name="fade">
-        <fundamentals-menu :menuItem="menuItem" v-if="menuItem" />
+        <fundamentals-menu
+        :menuItem="menuItem"
+        @subItemSelected="subItemSelected"
+        v-if="menuItem" />
       </transition>
     </div>
   </div>
@@ -56,7 +59,8 @@
 <script lang="ts">
 import FundamentalsMenu from '@/components/main-menu/FundamentalsMenu.vue';
 import AvatarTalkGuide from '@/components/shared/AvatarTalkGuide.vue';
-import { HomeMenuType, MssgeType } from '@/components/main-menu/Fundamentals';
+import { HomeMenuType, MssgeType, SubItem } from '@/components/main-menu/Fundamentals';
+import { homeMssges } from '@/components/main-menu/Mssges';
 
 import { Component, Vue } from 'vue-property-decorator';
 @Component({ components: { FundamentalsMenu, AvatarTalkGuide } })
@@ -69,30 +73,7 @@ export default class Home extends Vue {
 
   mssgeType = MssgeType.WELCOME;
 
-  mssge = {
-    [MssgeType.WELCOME]: ['avatar_mssge_welcome_one'],
-    [MssgeType.SCRUM]: [
-      'avatar_mssge_scrum_one',
-      'avatar_mssge_scrum_two',
-      'avatar_mssge_scrum_three'
-    ],
-    [MssgeType.ARTIFACTS]: [
-      'avatar_mssge_artifacts_one',
-      'avatar_mssge_artifacts_two',
-      'avatar_mssge_artifacts_three',
-      'avatar_mssge_learn_more'
-    ],
-    [MssgeType.VALUES]: [
-      'avatar_mssge_values_one',
-      'avatar_mssge_values_two',
-      'avatar_mssge_learn_more'],
-    [MssgeType.ROLES]: [
-      'avatar_mssge_roles_one',
-      'avatar_mssge_roles_two',
-      'avatar_mssge_roles_three',
-      'avatar_mssge_learn_more'
-    ]
-  };
+  mssge = homeMssges
 
   selectMenu(menuItem: MssgeType) {
     this.menuItem = '';
@@ -100,6 +81,10 @@ export default class Home extends Vue {
     setTimeout(() => {
       this.menuItem = menuItem;
     }, 100);
+  }
+
+  subItemSelected(subItem: SubItem) {
+    this.mssgeType = subItem.name;
   }
 }
 </script>
@@ -177,7 +162,7 @@ body {
   .home {
     height: 100%;
     &__avatar-talk {
-      padding-top: 100px;
+      padding-top: 80px;
     }
   }
 }
