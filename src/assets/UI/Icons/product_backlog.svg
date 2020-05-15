@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="51px" height="70px" viewBox="0 0 51 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>UI / Icons / product_backlog</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-Page---Artifact" transform="translate(-368.000000, -782.000000)">
+            <g id="Product-Backlog" transform="translate(368.000000, 782.000000)">
+                <g id="UI-/-Icons-/-product_backlog">
+                    <g id="Group-6">
+                        <rect id="Rectangle" stroke="#FFFFFF" stroke-width="3" fill-rule="nonzero" x="1.5" y="1.5" width="48" height="67" rx="2"></rect>
+                        <g id="Group-4-Copy" transform="translate(6.750000, 35.744681)" fill="#FFFFFF" fill-rule="nonzero">
+                            <rect id="Rectangle" x="6.51265823" y="0" width="30.2373418" height="2.9787234" rx="1.4893617"></rect>
+                            <rect id="Rectangle" x="0" y="0" width="3" height="2.9787234" rx="1.4893617"></rect>
+                        </g>
+                        <g id="Group-4-Copy-2" transform="translate(6.750000, 46.170213)" fill="#FFFFFF" fill-rule="nonzero">
+                            <rect id="Rectangle" x="6.51265823" y="0" width="30.2373418" height="2.9787234" rx="1.4893617"></rect>
+                            <rect id="Rectangle" x="0" y="0" width="3" height="2.9787234" rx="1.4893617"></rect>
+                        </g>
+                        <g id="Group-4-Copy-5" transform="translate(6.750000, 55.851064)" fill="#FFFFFF" fill-rule="nonzero">
+                            <rect id="Rectangle" x="6.51265823" y="0" width="30.2373418" height="2.9787234" rx="1.4893617"></rect>
+                            <rect id="Rectangle" x="0" y="0" width="3" height="2.9787234" rx="1.4893617"></rect>
+                        </g>
+                        <g id="Group-3" transform="translate(7.500000, 11.914894)" fill="#FFFFFF" fill-rule="nonzero">
+                            <rect id="Rectangle" x="0" y="0" width="9.76898734" height="8.93617021" rx="1"></rect>
+                            <rect id="Rectangle-Copy" x="13.4905063" y="0" width="9.76898734" height="8.93617021" rx="1"></rect>
+                            <rect id="Rectangle-Copy-2" x="26.9810127" y="0" width="9.76898734" height="8.93617021" rx="1"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

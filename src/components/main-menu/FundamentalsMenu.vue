@@ -1,11 +1,13 @@
 <template>
-  <div class="artifact container">
+  <div class="subitems container">
     <div class="row d-flex justify-content-around">
-      <h2 class="artifact__menu"
-      @click="subItemSelected(fundamental)"
-       v-for="fundamental in fudamentalList" :key="fundamental.name">
-        {{ $t(fundamental.name) }}
-      </h2>
+      <div
+        class="d-flex flex-column justify-content-end subitems__container"
+        v-for="fundamental in fudamentalList"
+        :key="fundamental.name">
+        <img :src="require(`@/assets/UI/Icons/${fundamental.imgSrc}.svg`)" alt="">
+        <p>{{$t(fundamental.name)}}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -23,22 +25,27 @@ export default class FundamentalsMenu extends Vue {
 
   fundamentals: Fundamentals = {
     [this.fundamentalsType.ARTIFACTS]: [
-      { name: MssgeType.ARTIFACT_PROD_BACKLOG },
-      { name: MssgeType.ARTIFACT_SPRINT_BACKLOG },
-      { name: MssgeType.ARTIFACT_INCREMENT }
+      { name: MssgeType.ARTIFACT_PROD_BACKLOG, imgSrc: 'product_backlog' },
+      { name: MssgeType.ARTIFACT_SPRINT_BACKLOG, imgSrc: 'sprint_backlog' },
+      { name: MssgeType.ARTIFACT_INCREMENT, imgSrc: 'product_increment' }
+    ],
+    [this.fundamentalsType.EVENTS]: [
+      { name: MssgeType.EVENTS_SPRINT_PLANNING, imgSrc: 'sprint_planning' },
+      { name: MssgeType.EVENTS_DAILY_SCRUM, imgSrc: 'daily_scrum' },
+      { name: MssgeType.EVENTS_SPRINT_REVIEW, imgSrc: 'sprint_review' },
+      { name: MssgeType.EVENTS_SPRINT_RETROSPECTIVE, imgSrc: 'sprint_retro' }
     ],
     [this.fundamentalsType.VALUES]: [
-      { name: MssgeType.VALUES_COMMITMENT },
-      { name: MssgeType.VALUES_COURAGE },
-      { name: MssgeType.VALUES_OPENNES },
-      { name: MssgeType.VALUES_RESPECT },
-      { name: MssgeType.VALUES_FOCUS }
-
+      { name: MssgeType.VALUES_COMMITMENT, imgSrc: 'sprint-planing' },
+      { name: MssgeType.VALUES_COURAGE, imgSrc: 'sprint-planing' },
+      { name: MssgeType.VALUES_OPENNES, imgSrc: 'sprint-planing' },
+      { name: MssgeType.VALUES_RESPECT, imgSrc: 'sprint-planing' },
+      { name: MssgeType.VALUES_FOCUS, imgSrc: 'sprint-planing' }
     ],
     [this.fundamentalsType.ROLES]: [
-      { name: MssgeType.ROLES_SCRUM_MASTER },
-      { name: MssgeType.ROLES_PROD_OWNER },
-      { name: MssgeType.ROLES_DEV_TEAM }
+      { name: MssgeType.ROLES_SCRUM_MASTER, imgSrc: 'scrum_master' },
+      { name: MssgeType.ROLES_PROD_OWNER, imgSrc: 'product_owner' },
+      { name: MssgeType.ROLES_DEV_TEAM, imgSrc: 'dev_team' }
     ]
   };
 
@@ -52,26 +59,20 @@ export default class FundamentalsMenu extends Vue {
 }
 </script>
 <style lang="scss">
-.artifact {
+.subitems {
   position: absolute;
-  bottom: 5%;
-  &__menu {
-    color: white;
-    margin-top: 20px;
-    padding-bottom: 5px;
-    cursor: pointer;
-    &:hover{
-        border-bottom: 5px solid white;
-        padding-bottom: 0px;
-        transition: 0.5s;
-    }
-    &:nth-child(5){
-      text-align: left;
+  bottom: 3%;
+  &__container{
+    p{
+      margin-bottom: 0;
+      color:white;
+      margin-top: 10px;
+      text-align: center;
     }
   }
 }
 @media only screen and (min-height: 900px) {
-  .artifact {
+  .subitems {
     bottom: 10%;
   }
 }

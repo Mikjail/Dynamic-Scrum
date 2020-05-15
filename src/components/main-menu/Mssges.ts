@@ -13,10 +13,15 @@ export const homeMssges = {
     'avatar_mssge_artifacts_three',
     'avatar_mssge_learn_more'
   ],
+  [MssgeType.EVENTS]: [
+    'avatar_mssge_events_one',
+    'avatar_mssge_events_two',
+    'avatar_mssge_learn_more'],
   [MssgeType.VALUES]: [
     'avatar_mssge_values_one',
     'avatar_mssge_values_two',
-    'avatar_mssge_learn_more'],
+    'avatar_mssge_learn_more'
+  ],
   [MssgeType.ROLES]: [
     'avatar_mssge_roles_one',
     'avatar_mssge_roles_two',

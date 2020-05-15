@@ -1,4 +1,5 @@
 export enum FundamentalsEnum {
+  EVENTS = 'events',
   ARTIFACTS = 'artifacts',
   VALUES = 'values',
   ROLES = 'roles'
@@ -14,17 +15,23 @@ export interface Fundamentals {
   artifacts: Array<SubItem>;
   values: Array<SubItem>;
   roles: Array<SubItem>;
+  events: Array<SubItem>;
 }
 
 export enum MssgeType {
   WELCOME = 'welcome',
   SCRUM = 'scrum',
   ARTIFACTS = 'artifacts',
+  EVENTS = 'events',
   VALUES = 'values',
   ROLES = 'roles',
   ARTIFACT_PROD_BACKLOG = 'artifact_product-backlog',
   ARTIFACT_SPRINT_BACKLOG = 'artifact_sprint-backlog',
   ARTIFACT_INCREMENT = 'artifact_increment',
+  EVENTS_SPRINT_PLANNING = 'events_sprint-planning',
+  EVENTS_DAILY_SCRUM = 'events_daily-scrum',
+  EVENTS_SPRINT_REVIEW = 'events_sprint-review',
+  EVENTS_SPRINT_RETROSPECTIVE = 'events_sprint-retro',
   VALUES_COMMITMENT = 'values_commitment',
   VALUES_COURAGE = 'values_courage',
   VALUES_OPENNES = 'values_opennes',
@@ -35,13 +42,25 @@ export enum MssgeType {
   ROLES_DEV_TEAM = 'roles_dev-team'
 }
 
-export interface SubItem {
-  name: MssgeType;
+export enum ImageSrc {
+  ARTIFACT_PROD_BACKLOG = 'product_backlog',
+  ARTIFACT_SPRINT_BACKLOG = 'sprint_backlog',
+  ARTIFACT_INCREMENT = 'product_increment',
+  EVENTS_SPRINT_PLANNING = 'sprint_planning',
+  EVENTS_DAILY_SCRUM = 'daily_scrum',
+  EVENTS_SPRINT_REVIEW = 'sprint_review',
+  EVENTS_SPRINT_RETROSPECTIVE = 'sprint_retro',
+  ROLES_SCRUM_MASTER = 'scrum-master',
+  ROLES_PROD_OWNER = 'product-owner',
+  ROLES_DEV_TEAM = 'dev-team',
+  VALUES_COMMITMENT = 'values_commitment',
+  VALUES_COURAGE = 'values_courage',
+  VALUES_OPENNES = 'values_opennes',
+  VALUES_RESPECT = 'values_respect',
+  VALUES_FOCUS = 'values_focus'
 }
 
-export enum HomeMenuType {
-  SCRUM = 'scrum',
-  ARTIFACTS = 'artifacts',
-  VALUES = 'values',
-  ROLES = 'roles'
+export interface SubItem {
+  name: MssgeType;
+  imgSrc: string;
 }

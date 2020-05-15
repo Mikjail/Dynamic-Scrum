@@ -30,9 +30,9 @@
           <h2
             @mouseover="arrowActive = 'center'"
             @mouseleave="arrowActive = ''"
-            @click="selectMenu(homeMenuType.VALUES)"
-            :class="{ active: menuItem === homeMenuType.VALUES }">
-            Values
+            @click="selectMenu(homeMenuType.EVENTS)"
+            :class="{ active: menuItem === homeMenuType.EVENTS }">
+            Events
             </h2>
         </div>
         <div class="home__main-menu__nav-item">
@@ -59,13 +59,13 @@
 <script lang="ts">
 import FundamentalsMenu from '@/components/main-menu/FundamentalsMenu.vue';
 import AvatarTalkGuide from '@/components/shared/AvatarTalkGuide.vue';
-import { HomeMenuType, MssgeType, SubItem } from '@/components/main-menu/Fundamentals';
+import { FundamentalsEnum, MssgeType, SubItem } from '@/components/main-menu/Fundamentals';
 import { homeMssges } from '@/components/main-menu/Mssges';
 
 import { Component, Vue } from 'vue-property-decorator';
 @Component({ components: { FundamentalsMenu, AvatarTalkGuide } })
 export default class Home extends Vue {
-  homeMenuType = HomeMenuType;
+  homeMenuType = FundamentalsEnum;
 
   menuItem = '';
 
@@ -116,7 +116,7 @@ body {
   }
   &__arrows {
     width: 100%;
-    height: 100px;
+    height: 64px;
     img {
       position: relative;
       &:first-child {
