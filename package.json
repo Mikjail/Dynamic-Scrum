@@ -1,5 +1,6 @@
 {
   "name": "dynamic-scrum",
+  "author": "Mikjail Salazar",
   "version": "0.1.0",
   "private": true,
   "scripts": {
