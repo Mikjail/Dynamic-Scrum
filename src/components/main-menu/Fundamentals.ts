@@ -34,7 +34,7 @@ export enum MssgeType {
   EVENTS_SPRINT_RETROSPECTIVE = 'events_sprint-retro',
   VALUES_COMMITMENT = 'values_commitment',
   VALUES_COURAGE = 'values_courage',
-  VALUES_OPENNES = 'values_opennes',
+  VALUES_OPENNESS = 'values_openness',
   VALUES_RESPECT = 'values_respect',
   VALUES_FOCUS = 'values_focus',
   ROLES_SCRUM_MASTER = 'roles_scrum-master',
@@ -55,7 +55,7 @@ export enum ImageSrc {
   ROLES_DEV_TEAM = 'dev-team',
   VALUES_COMMITMENT = 'values_commitment',
   VALUES_COURAGE = 'values_courage',
-  VALUES_OPENNES = 'values_opennes',
+  VALUES_OPENNESS = 'values_openness',
   VALUES_RESPECT = 'values_respect',
   VALUES_FOCUS = 'values_focus'
 }

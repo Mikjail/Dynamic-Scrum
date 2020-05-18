@@ -1,5 +1,8 @@
 {
-  "avatar_mssge_learn_more": "<strong>If you want to know more then click on any of the icons below!</strong>",
+  "menu_events": "Events",
+  "menu_roles": "Roles",
+  "menu_artifacts": "Artifacts",
+  "avatar_mssge_learn_more": "<strong>If you want to know more then click on any of the icons below or check the <a href='https://www.scrumguides.org/scrum-guide.html' target='_blank'>Scrum Guide</a></strong>",
   "avatar_mssge_learn_more-demo": "If you want to know more then click on the <strong>Demo</strong> button below!",
   "events_sprint-planning": "Sprint Planning",
   "events_daily-scrum": "Daily Scrum",
@@ -11,7 +14,7 @@
   "values_commitment": "Commitment",
   "values_courage": "Courage",
   "values_focus": "Focus",
-  "values_opennes": "Opennes",
+  "values_openness": "openness",
   "values_respect": "Respect",
   "roles_scrum-master": "Scrum Master",
   "roles_product-owner": "Prduct Owner",

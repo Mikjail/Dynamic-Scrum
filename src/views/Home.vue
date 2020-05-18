@@ -6,8 +6,8 @@
     <div class="row d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex flex-column align-items-center home__main-title">
         <h2
-          @click="selectMenu(homeMenuType.SCRUM)"
-          :class="{ active: menuItem === homeMenuType.SCRUM }">
+          @click="selectMenu(homeMenuType.VALUES)"
+          :class="{ active: menuItem === homeMenuType.VALUES }">
         Scrum
         </h2>
         <div class="d-flex home__arrows">
@@ -23,7 +23,7 @@
             @mouseleave="arrowActive = ''"
             :class="{ active: menuItem === homeMenuType.ARTIFACTS }"
             @click="selectMenu(homeMenuType.ARTIFACTS)">
-            Artifacts
+            {{$t('menu_artifacts')}}
             </h2>
         </div>
         <div class="home__main-menu__nav-item">
@@ -32,7 +32,7 @@
             @mouseleave="arrowActive = ''"
             @click="selectMenu(homeMenuType.EVENTS)"
             :class="{ active: menuItem === homeMenuType.EVENTS }">
-            Events
+            {{$t('menu_events')}}
             </h2>
         </div>
         <div class="home__main-menu__nav-item">
@@ -41,12 +41,12 @@
             @mouseleave="arrowActive = ''"
             @click="selectMenu(homeMenuType.ROLES)"
             :class="{ active: menuItem === homeMenuType.ROLES }">
-            Roles
+            {{$t('menu_roles')}}
             </h2>
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="fixed-bottom">
       <transition name="fade">
         <fundamentals-menu
         :menuItem="menuItem"
@@ -58,7 +58,7 @@
 </template>
 <script lang="ts">
 import FundamentalsMenu from '@/components/main-menu/FundamentalsMenu.vue';
-import AvatarTalkGuide from '@/components/shared/AvatarTalkGuide.vue';
+import AvatarTalkGuide from '@/components/shared/AvatarTalk/AvatarTalkGuide.vue';
 import { FundamentalsEnum, MssgeType, SubItem } from '@/components/main-menu/Fundamentals';
 import { homeMssges } from '@/components/main-menu/Mssges';
 
@@ -103,6 +103,7 @@ body {
   &__main-title {
     width: 80%;
     h2 {
+      @include main-title-font;
       cursor: pointer;
       position: relative;
       top: 32px;
@@ -138,6 +139,7 @@ body {
     width: 80%;
     margin-top: 50px;
     &__nav-item {
+      @include main-title-font;
       flex-basis: 33.33%;
       display: flex;
       justify-content: center;

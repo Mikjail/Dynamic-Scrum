@@ -18,6 +18,8 @@ export const homeMssges = {
     'avatar_mssge_events_two',
     'avatar_mssge_learn_more'],
   [MssgeType.VALUES]: [
+    'avatar_mssge_scrum_one',
+    'avatar_mssge_events_two',
     'avatar_mssge_values_one',
     'avatar_mssge_values_two',
     'avatar_mssge_learn_more'
@@ -47,7 +49,7 @@ export const homeMssges = {
   [MssgeType.VALUES_COURAGE]: [
     'avatar_mssge_values_courage_one'
   ],
-  [MssgeType.VALUES_OPENNES]: [
+  [MssgeType.VALUES_OPENNESS]: [
     'avatar_mssge_values_opennes_one'
   ],
   [MssgeType.VALUES_RESPECT]: [

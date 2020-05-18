@@ -89,7 +89,7 @@ export default class AvatarTalkGuide extends Vue {
       setTimeout(() => {
         this.mssgeToSow = this.mssges[this.indexShowing];
         this.mssgeReady = true;
-      }, 1000);
+      }, 500);
     }
   }
 
@@ -162,7 +162,7 @@ export default class AvatarTalkGuide extends Vue {
     &--cloud {
       height: 200px;
       width: 200px;
-      background: url('../../assets/mssge_cloud.svg') center no-repeat;
+      background: url('../../../assets/mssge_cloud.svg') center no-repeat;
     }
     color: white;
     p {
@@ -173,6 +173,10 @@ export default class AvatarTalkGuide extends Vue {
       width: 100%;
       ul{
         padding-left: 25px;
+      }
+      a{
+        color: white;
+        text-decoration: underline;
       }
     }
   }

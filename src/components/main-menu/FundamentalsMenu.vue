@@ -1,6 +1,5 @@
 <template>
-  <div class="subitems container">
-    <div class="row d-flex justify-content-around">
+    <div class="row d-flex justify-content-around subitems">
       <div
         class="d-flex flex-column justify-content-end subitems__container"
         v-for="fundamental in fudamentalList"
@@ -9,7 +8,6 @@
         <p>{{$t(fundamental.name)}}</p>
       </div>
     </div>
-  </div>
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
@@ -36,11 +34,11 @@ export default class FundamentalsMenu extends Vue {
       { name: MssgeType.EVENTS_SPRINT_RETROSPECTIVE, imgSrc: 'sprint_retro' }
     ],
     [this.fundamentalsType.VALUES]: [
-      { name: MssgeType.VALUES_COMMITMENT, imgSrc: 'sprint-planing' },
-      { name: MssgeType.VALUES_COURAGE, imgSrc: 'sprint-planing' },
-      { name: MssgeType.VALUES_OPENNES, imgSrc: 'sprint-planing' },
-      { name: MssgeType.VALUES_RESPECT, imgSrc: 'sprint-planing' },
-      { name: MssgeType.VALUES_FOCUS, imgSrc: 'sprint-planing' }
+      { name: MssgeType.VALUES_COMMITMENT, imgSrc: 'commitment' },
+      { name: MssgeType.VALUES_COURAGE, imgSrc: 'courage' },
+      { name: MssgeType.VALUES_OPENNESS, imgSrc: 'openness' },
+      { name: MssgeType.VALUES_RESPECT, imgSrc: 'respect' },
+      { name: MssgeType.VALUES_FOCUS, imgSrc: 'focus' }
     ],
     [this.fundamentalsType.ROLES]: [
       { name: MssgeType.ROLES_SCRUM_MASTER, imgSrc: 'scrum_master' },
@@ -60,8 +58,9 @@ export default class FundamentalsMenu extends Vue {
 </script>
 <style lang="scss">
 .subitems {
-  position: absolute;
-  bottom: 3%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
   &__container{
     p{
       margin-bottom: 0;
