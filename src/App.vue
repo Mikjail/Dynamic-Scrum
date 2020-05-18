@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <div class="container-fluid">
+    <div class="container-fluid app__container">
       <div class="container">
           <div class="app__language float-right">
             <div class="app__language__selected"
@@ -25,12 +25,20 @@
       </div>
     <router-view />
     </div>
+    <div class="not-supported">
+        <not-supported> </not-supported>
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import NotSupported from '@/components/not-supported/NotSupported.vue';
 
-@Component
+@Component({
+  components: {
+    NotSupported
+  }
+})
 export default class App extends Vue {
   selectedLang = 'En';
 
@@ -97,6 +105,27 @@ body{
 .btn-outline-primary {
   &.white {
     @include btn-white-no-bg;
+  }
+}
+
+@media only screen and(min-width: 625px){
+  .not-supported{
+    display:none;
+  }
+}
+
+@media only screen and(max-width: 625px){
+  .app__container{
+    display:none;
+  }
+  .not-supported{
+    display: flex;
+    padding-top: 25%;
+    justify-content: center;
+    height: 100%;
+  }
+  body{
+    background: linear-gradient(white 90%, #005cff 20%);
   }
 }
 </style>

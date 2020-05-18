@@ -2,9 +2,13 @@
   <div class="row d-flex flex-column align-items-center main-avatar">
     <div
       :class="bgTypeSelected"
+      :style="styleMssge"
       class="d-flex flex-column justify-content-center align-items-center main-avatar__cloud-mssge">
       <transition name="fade">
-        <p v-if="mssgeReady" v-html="$t(mssges[indexShowing])"></p>
+        <p
+         :style="{ textAlign: mssgAlign }"
+         v-if="mssgeReady"
+         v-html="$t(mssges[indexShowing])"></p>
       </transition>
       <div class="main-avatar__cloud-mssge__btns" v-if="mssgeReady">
         <button
@@ -46,6 +50,12 @@ export default class AvatarTalkGuide extends Vue {
 
   @Prop({ default: 'frame' }) bgType!: string;
 
+  @Prop({ default: '420' }) mssgWidth!: string;
+
+  @Prop({ default: '200' }) mssgHeight!: string;
+
+  @Prop({ default: 'justify' }) mssgAlign!: string;
+
   @Watch('mssges')
   onMssgesChanged() {
     this.indexShowing = 0;
@@ -60,6 +70,11 @@ export default class AvatarTalkGuide extends Vue {
   lengthOfMessage = 0;
 
   mssgeToSow = ''
+
+  styleMssge ={
+    width: `${this.mssgWidth}px`,
+    height: `${this.mssgHeight}px`
+  }
 
   get isBackAvailable() {
     const currentIndex = this.indexShowing + 1;
