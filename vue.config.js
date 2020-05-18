@@ -1,4 +1,7 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production' ?
+    '/learn-scrum/' :
+    '/',
   css: {
     loaderOptions: {
       sass: {
@@ -6,7 +9,6 @@ module.exports = {
       }
     }
   },
-
   pluginOptions: {
     i18n: {
       locale: 'en',
