@@ -5,11 +5,11 @@
     </div>
     <div class="row d-flex flex-column justify-content-center align-items-center">
       <div class="d-flex flex-column align-items-center home__main-title">
-        <h2
+        <h4
           @click="selectMenu(homeMenuType.VALUES)"
           :class="{ active: menuItem === homeMenuType.VALUES }">
         Scrum
-        </h2>
+        </h4>
         <div class="d-flex home__arrows">
           <img src="@/assets/arrow_left.svg" alt v-show="arrowActive === 'left'" />
           <img src="@/assets/arrow_center.svg" alt v-show="arrowActive === 'center'" />
@@ -18,31 +18,31 @@
       </div>
       <div class="d-flex home__main-menu">
         <div class="home__main-menu__nav-item">
-          <h2
+          <h4
             @mouseover="arrowActive = 'left'"
             @mouseleave="arrowActive = ''"
             :class="{ active: menuItem === homeMenuType.ARTIFACTS }"
             @click="selectMenu(homeMenuType.ARTIFACTS)">
             {{$t('menu_artifacts')}}
-            </h2>
+            </h4>
         </div>
         <div class="home__main-menu__nav-item">
-          <h2
+          <h4
             @mouseover="arrowActive = 'center'"
             @mouseleave="arrowActive = ''"
             @click="selectMenu(homeMenuType.EVENTS)"
             :class="{ active: menuItem === homeMenuType.EVENTS }">
             {{$t('menu_events')}}
-            </h2>
+            </h4>
         </div>
         <div class="home__main-menu__nav-item">
-          <h2
+          <h4
             @mouseover="arrowActive = 'right'"
             @mouseleave="arrowActive = ''"
             @click="selectMenu(homeMenuType.ROLES)"
             :class="{ active: menuItem === homeMenuType.ROLES }">
             {{$t('menu_roles')}}
-            </h2>
+            </h4>
         </div>
       </div>
     </div>
@@ -102,7 +102,7 @@ body {
   }
   &__main-title {
     width: 80%;
-    h2 {
+    h4 {
       @include main-title-font;
       cursor: pointer;
       position: relative;
@@ -143,7 +143,7 @@ body {
       flex-basis: 33.33%;
       display: flex;
       justify-content: center;
-      h2 {
+      h4 {
         cursor: pointer;
         &.active {
           border-bottom: 5px solid $secondary;
