@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter, { RouteConfig } from 'vue-router';
 import Home from '../views/Home.vue';
 import ProductBacklog from '../views/ProductBacklog.vue';
+import SprintBacklog from '../views/SprintBacklog.vue';
 
 Vue.use(VueRouter);
 
@@ -15,6 +16,11 @@ const routes: Array<RouteConfig> = [
     path: '/product-backlog',
     name: 'Product Backlog',
     component: ProductBacklog
+  },
+  {
+    path: '/sprint-backlog',
+    name: 'Sprint Backlog',
+    component: SprintBacklog
   }
 ];
 
