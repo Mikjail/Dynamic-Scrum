@@ -22,7 +22,6 @@
             <slot name="item-description"> </slot>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -61,9 +60,6 @@ export default class ProductBacklog extends Vue {
         margin-top: 100px;
         &__prev{
             padding: 0 16px;
-            &>img{
-              @include shadow-panel;
-            }
         }
         &__right{
           flex-basis: 65%;
@@ -84,14 +80,14 @@ export default class ProductBacklog extends Vue {
     }
   }
   @media only screen and (max-width: 1200px){
-    .product-backlog{
+  .item-description{
       &__avatar{
         display: none;
       }
     }
   }
    @media only screen and (max-width: 800px){
-    .product-backlog{
+    .item-description{
       &__info{
         &__desc{
           &__prev{
@@ -101,9 +97,6 @@ export default class ProductBacklog extends Vue {
             flex-basis: 100%;
           }
         }
-         &__ownership{
-            display:none;
-          }
       }
     }
   }
