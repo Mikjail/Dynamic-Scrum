@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="42px" viewBox="0 0 27 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>PO Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dynamic-Scrum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Scrum-Master" transform="translate(-473.000000, -210.000000)">
+            <g id="Img-Prev" transform="translate(269.000000, 210.000000)">
+                <g id="PO-Icon" transform="translate(204.000000, 0.000000)">
+                    <path d="M13.5,1.93019523 C8.09976215,1.93019523 3.71536105,6.38531957 3.71536105,11.8890452 C3.71536105,14.7858995 4.93594332,17.4786201 7.02724346,19.3569648 L7.90152846,20.142222 L6.99770098,20.8932873 C3.33960067,23.9331065 1.01536105,29.2675551 1.01536105,34.9348884 C1.01536105,38.4597453 6.38681332,40.9224934 13.496691,40.8993225 C20.5838014,40.8762259 25.9846389,38.3882708 25.9846389,34.9348884 C25.9846389,29.2673436 23.6602541,23.933037 20.0020707,20.8943569 L19.0980537,20.1434326 L19.9722634,19.3580084 C22.0640543,17.4786615 23.2846389,14.785911 23.2846389,11.8890452 C23.2846389,6.38531957 18.9002378,1.93019523 13.5,1.93019523 Z" id="Path" stroke="#005CFF" stroke-width="2.03072211" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    <text id="PO" font-family="Noteworthy-Light, Noteworthy" font-size="11" font-weight="300" fill="#005CFF">
+                        <tspan x="7.123125" y="35">PO</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
