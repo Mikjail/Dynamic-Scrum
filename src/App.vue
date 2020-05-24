@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="app">
-    <div class="container-fluid app__container">
+    <div class="app__container">
       <div class="container">
           <div class="app__language float-right">
             <div class="app__language__selected"

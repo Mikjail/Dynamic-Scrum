@@ -63,4 +63,5 @@ export enum ImageSrc {
 export interface SubItem {
   name: MssgeType;
   imgSrc: string;
+  routeSrc? : string;
 }

@@ -49,6 +49,9 @@
   "avatar_mssge_roles_productOwner_two":"The <strong>Product Owner</strong> is one person, not a committee. The Product Owner may represent the desires of a committee in the Product Backlog, but those wanting to change a Product Backlog item’s priority must address the Product Owner.",
   "avatar_mssge_roles_productOwner_three":"The <strong>Product Owner</strong> is one person, not a committee. The Product Owner may represent the desires of a committee in the Product Backlog, but those wanting to change a Product Backlog item’s priority must address the Product Owner.",
   "avatar_mssge_roles_devTeam_one": "The <strong>Development Team</strong> consists of professionals who do the work of delivering a potentially releasable Increment of \"Done\" product at the end of each Sprint. A \"Done\" increment is required at the Sprint Review. Only members of the Development Team create the Increment.",
-  "avatar_mssge_roles_devTeam_two": "<strong>Development Teams</strong> are structured and empowered by the organization to organize and manage their own work. The resulting synergy optimizes the Development Team’s overall efficiency and effectiveness."
-
+  "avatar_mssge_roles_devTeam_two": "<strong>Development Teams</strong> are structured and empowered by the organization to organize and manage their own work. The resulting synergy optimizes the Development Team’s overall efficiency and effectiveness.",
+  "product-backlog_list_one": "A Product Backlog is never complete. It might change once you have a better understanging of the product",
+  "product-backlog_list_two": "Product Backlog is dynamic; it constantly changes to identify what the product needs to be appropriate, competitive, and useful",
+  "product-backlog_list_three": "For one product there is only one Product Backlog. Even though there is more than one Scrum Team.",
+  "product-backlog_list_four": "Any time you can add details, estimates and order the item, we call Produck Backlog Refinement to this act and you can do it collaboration with the Developer Team"
 }

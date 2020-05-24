@@ -4,8 +4,18 @@
         class="d-flex flex-column justify-content-end subitems__container"
         v-for="fundamental in fudamentalList"
         :key="fundamental.name">
-        <img :src="require(`@/assets/UI/Icons/${fundamental.imgSrc}.svg`)" alt="">
-        <p>{{$t(fundamental.name)}}</p>
+        <template v-if="fundamental.routeSrc">
+          <router-link
+              :to="fundamental.routeSrc"
+            >
+              <img :src="require(`@/assets/UI/Icons/${fundamental.imgSrc}.svg`)" alt="">
+               <p>{{$t(fundamental.name)}}</p>
+          </router-link>
+        </template>
+        <template v-else>
+          <img :src="require(`@/assets/UI/Icons/${fundamental.imgSrc}.svg`)" alt="">
+          <p>{{$t(fundamental.name)}}</p>
+        </template>
       </div>
     </div>
 </template>
@@ -23,15 +33,15 @@ export default class FundamentalsMenu extends Vue {
 
   fundamentals: Fundamentals = {
     [this.fundamentalsType.ARTIFACTS]: [
-      { name: MssgeType.ARTIFACT_PROD_BACKLOG, imgSrc: 'product_backlog' },
-      { name: MssgeType.ARTIFACT_SPRINT_BACKLOG, imgSrc: 'sprint_backlog' },
-      { name: MssgeType.ARTIFACT_INCREMENT, imgSrc: 'product_increment' }
+      { name: MssgeType.ARTIFACT_PROD_BACKLOG, imgSrc: 'product_backlog', routeSrc: '/product-backlog' },
+      { name: MssgeType.ARTIFACT_SPRINT_BACKLOG, imgSrc: 'sprint_backlog', routeSrc: '/sprint-backlog' },
+      { name: MssgeType.ARTIFACT_INCREMENT, imgSrc: 'product_increment', routeSrc: '/product-increment' }
     ],
     [this.fundamentalsType.EVENTS]: [
-      { name: MssgeType.EVENTS_SPRINT_PLANNING, imgSrc: 'sprint_planning' },
-      { name: MssgeType.EVENTS_DAILY_SCRUM, imgSrc: 'daily_scrum' },
-      { name: MssgeType.EVENTS_SPRINT_REVIEW, imgSrc: 'sprint_review' },
-      { name: MssgeType.EVENTS_SPRINT_RETROSPECTIVE, imgSrc: 'sprint_retro' }
+      { name: MssgeType.EVENTS_SPRINT_PLANNING, imgSrc: 'sprint_planning', routeSrc: '/sprint-planning' },
+      { name: MssgeType.EVENTS_DAILY_SCRUM, imgSrc: 'daily_scrum', routeSrc: '/daily-scrum' },
+      { name: MssgeType.EVENTS_SPRINT_REVIEW, imgSrc: 'sprint_review', routeSrc: '/sprint-review' },
+      { name: MssgeType.EVENTS_SPRINT_RETROSPECTIVE, imgSrc: 'sprint_retro', routeSrc: '/sprint-retro' }
     ],
     [this.fundamentalsType.VALUES]: [
       { name: MssgeType.VALUES_COMMITMENT, imgSrc: 'commitment' },
@@ -41,9 +51,9 @@ export default class FundamentalsMenu extends Vue {
       { name: MssgeType.VALUES_FOCUS, imgSrc: 'focus' }
     ],
     [this.fundamentalsType.ROLES]: [
-      { name: MssgeType.ROLES_SCRUM_MASTER, imgSrc: 'scrum_master' },
-      { name: MssgeType.ROLES_PROD_OWNER, imgSrc: 'product_owner' },
-      { name: MssgeType.ROLES_DEV_TEAM, imgSrc: 'dev_team' }
+      { name: MssgeType.ROLES_SCRUM_MASTER, imgSrc: 'scrum_master', routeSrc: '/scrum-master' },
+      { name: MssgeType.ROLES_PROD_OWNER, imgSrc: 'product_owner', routeSrc: '/product-owner' },
+      { name: MssgeType.ROLES_DEV_TEAM, imgSrc: 'dev_team', routeSrc: '/dev-team' }
     ]
   };
 
@@ -62,15 +72,20 @@ export default class FundamentalsMenu extends Vue {
   display: flex;
   align-items: center;
   &__container{
-    img{
-      height: 50px;
-    }
-    p{
-      margin-bottom: 0;
-      color:white;
-      margin-top: 10px;
-      text-align: center;
-    }
+     a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      img{
+        height: 50px;
+      }
+      p{
+        margin-bottom: 0;
+        color:white;
+        margin-top: 10px;
+        text-align: center;
+      }
   }
 }
 @media only screen and (min-height: 900px) {

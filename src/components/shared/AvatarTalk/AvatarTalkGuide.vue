@@ -1,7 +1,9 @@
 <template>
-  <div class="row d-flex flex-column align-items-center main-avatar">
+  <div
+    :class="alignByCloudType"
+    class="row d-flex flex-column main-avatar">
     <div
-      :class="bgTypeSelected"
+      :class="cloudTypeSelected"
       :style="styleMssge"
       class="d-flex flex-column justify-content-center align-items-center main-avatar__cloud-mssge">
       <transition name="fade">
@@ -31,6 +33,7 @@
       </div>
     </div>
     <div
+      :class="bgSelected"
       class="d-flex justify-content-center align-items-center main-avatar__img"
     >
       <img src="@/assets/main/main-avatar.svg" alt />
@@ -48,13 +51,18 @@ import TypingDots from './TypingDots.vue';
 export default class AvatarTalkGuide extends Vue {
   @Prop({ required: true }) mssges!: Array<string>;
 
-  @Prop({ default: 'frame' }) bgType!: string;
+  @Prop({ default: 'center' }) cloudDirection!: string;
+
+  @Prop({ default: 'frame' }) cloudType!: string;
 
   @Prop({ default: '420' }) mssgWidth!: string;
 
   @Prop({ default: '200' }) mssgHeight!: string;
 
   @Prop({ default: 'justify' }) mssgAlign!: string;
+
+  @Prop({ default: true }) avatarBg!: boolean;
+
 
   @Watch('mssges')
   onMssgesChanged() {
@@ -71,7 +79,7 @@ export default class AvatarTalkGuide extends Vue {
 
   mssgeToSow = ''
 
-  styleMssge ={
+  styleMssge = {
     width: `${this.mssgWidth}px`,
     height: `${this.mssgHeight}px`
   }
@@ -84,6 +92,26 @@ export default class AvatarTalkGuide extends Vue {
   get isNextAvailable() {
     const currentIndex = this.indexShowing + 1;
     return currentIndex < this.lengthOfMessage;
+  }
+
+  get cloudTypeSelected() {
+    return {
+      'main-avatar__cloud-mssge--center': this.cloudDirection === 'center',
+      'main-avatar__cloud-mssge--left': this.cloudDirection === 'left'
+    };
+  }
+
+  get bgSelected() {
+    return {
+      'main-avatar__img--no-bg': !this.avatarBg
+    };
+  }
+
+  get alignByCloudType() {
+    return {
+      'align-items-center': this.cloudDirection === 'center',
+      'align-items-start': this.cloudDirection === 'left'
+    };
   }
 
   mounted() {
@@ -117,13 +145,6 @@ export default class AvatarTalkGuide extends Vue {
     this.indexShowing -= 1;
     this.showMssge();
   }
-
-  get bgTypeSelected() {
-    return {
-      'main-avatar__cloud-mssge--frame': this.bgType === 'frame',
-      'main-avatar__cloud-mssge--cloud': this.bgType === 'cloud'
-    };
-  }
 }
 </script>
 <style lang="scss">
@@ -153,36 +174,46 @@ export default class AvatarTalkGuide extends Vue {
         }
       }
     }
-    &--frame {
-      height: 200px;
-      width: 420px;
+    &--center {
       border-radius: 25px;
       padding-bottom: 40px;
-      background-color: $primary;
       position: relative;
       &:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
         left: 50%;
-        width: 0;
-        height: 0;
         border: 25px solid transparent;
-        border-top-color: $primary;
         border-bottom: 0;
         margin-left: -25px;
         margin-bottom: -25px;
       }
     }
-    &--cloud {
-      height: 200px;
-      width: 200px;
-      background: url('../../../assets/mssge_cloud.svg') center no-repeat;
+    &--left {
+      border-radius: 25px 25px 25px 0;
+      position: relative;
+      margin-left: 90px;
+      &:after{
+          left: 14px;
+          border: 29px solid transparent;
+          border-bottom: 0;
+          border-left: 0;
+          margin-left: -14.5px;
+          margin-bottom: -29px;
+      }
     }
-    color: white;
+    &--center,
+    &--left{
+      background-color: $primary;
+      color:white;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-top-color: $primary;
+      }
+    }
     p {
       text-indent: 10px;
-      text-align: justify;
       margin: 0;
       font-size: 15px;
       width: 100%;
@@ -201,6 +232,10 @@ export default class AvatarTalkGuide extends Vue {
     margin-top: 48px;
     border-radius: 50%;
     background: $primary-gradient;
+    &--no-bg{
+      background: none;
+       margin-top: 10px;
+    }
   }
   &__typing {
     position: absolute;
