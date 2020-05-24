@@ -195,7 +195,7 @@ export default class AvatarTalkGuide extends Vue {
           border: 29px solid transparent;
           border-bottom: 0;
           border-left: 0;
-          margin-left: -14.5px;
+          margin-left: -14px;
           margin-bottom: -29px;
       }
     }
