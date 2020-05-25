@@ -5,6 +5,8 @@ import ProductBacklog from '../views/artifacts/ProductBacklog.vue';
 import SprintBacklog from '../views/artifacts/SprintBacklog.vue';
 import Increment from '../views/artifacts/Increment.vue';
 import ScrumMaster from '../views/roles/ScrumMaster.vue';
+import ProductOwner from '../views/roles/ProductOwner.vue';
+import DevTeam from '../views/roles/DevTeam.vue';
 
 Vue.use(VueRouter);
 
@@ -33,6 +35,16 @@ const routes: Array<RouteConfig> = [
     path: '/scrum-master',
     name: 'Scrum Master',
     component: ScrumMaster
+  },
+  {
+    path: '/product-owner',
+    name: 'Product Owner',
+    component: ProductOwner
+  },
+  {
+    path: '/dev-team',
+    name: 'Developer Team',
+    component: DevTeam
   }
 ];
 

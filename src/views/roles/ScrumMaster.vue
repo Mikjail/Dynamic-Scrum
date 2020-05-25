@@ -7,21 +7,21 @@
         <img
         src="@/assets/scrum-master/scrum_master_prev.svg" alt="">
         <div class="d-flex flex-column sprint-backlog__preview__menu">
-          <a href="#"
+          <a href="javascript:void(0)"
             @click="serviceTo = 'product-owner'"
             :class="isActive('product-owner')"
             class="d-flex flex-column align-items-center sprint-backlog__preview__menu__item">
             <img src="@/assets/scrum-master/po_icon.svg" alt="">
             <span> Product Owner </span>
           </a>
-          <a href="#"
-            @click="serviceTo = 'developer-team'"
-            :class="isActive('developer-team')"
+          <a href="javascript:void(0)"
+            @click="serviceTo = 'development-team'"
+            :class="isActive('development-team')"
             class="d-flex flex-column align-items-center sprint-backlog__preview__menu__item">
             <img src="@/assets/scrum-master/dt_icon.svg" alt="">
-            <span> Developer Team </span>
+            <span>Develpment Team</span>
           </a>
-          <a href="#"
+          <a href="javascript:void(0)"
             @click="serviceTo = 'organization'"
             :class="isActive('organization')"
             class="d-flex flex-column align-items-center sprint-backlog__preview__menu__item">
@@ -66,7 +66,7 @@ export default class ScrumMaster extends Vue {
       'scrum-master_po_six',
       'scrum-master_po_seven'
     ],
-    'developer-team': [
+    'development-team': [
       'scrum-master_dt_one',
       'scrum-master_dt_two',
       'scrum-master_dt_three',
@@ -136,7 +136,7 @@ export default class ScrumMaster extends Vue {
   .item-description__info__desc__prev {
     display: none;
   }
-  .item-description__info__desc__right[data-v-7fc88f69] {
+  .item-description__info__desc__right {
     flex-basis: 100%;
   }
 }
