@@ -66,6 +66,7 @@ export default class AvatarTalkGuide extends Vue {
 
   @Watch('mssges')
   onMssgesChanged() {
+    this.mssgeReady = false;
     this.indexShowing = 0;
   }
 

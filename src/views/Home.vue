@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    <div class="fixed-bottom">
+    <div class="home__footer fixed-bottom">
       <transition name="fade">
         <fundamentals-menu
         :menuItem="menuItem"
@@ -67,11 +67,11 @@ import { Component, Vue } from 'vue-property-decorator';
 export default class Home extends Vue {
   homeMenuType = FundamentalsEnum;
 
-  menuItem = '';
+  menuItem: string = MssgeType.VALUES;
 
   arrowActive = '';
 
-  mssgeType = MssgeType.WELCOME;
+  mssgeType = MssgeType.VALUES;
 
   mssge = homeMssges
 
@@ -151,6 +151,10 @@ body {
         }
       }
     }
+  }
+  &__footer{
+    background-color: $primary;
+    height: 17%;
   }
 }
 .fade-enter-active {

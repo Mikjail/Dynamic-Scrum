@@ -51,7 +51,7 @@ export default class SprintBacklog extends Vue {
   }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 1000px){
   .product-backlog{
     &__ownership{
       display: none;

@@ -72,7 +72,6 @@ export default class App extends Vue {
 }
 body{
   height: 100%;
-  background: linear-gradient( white 80%, $primary 20%);
 }
 
 .app {
