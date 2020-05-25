@@ -52,7 +52,7 @@ import ItemDescription from '@/components/shared/ItemDescription/ItemDescription
   }
 })
 export default class ScrumMaster extends Vue {
-  avatarMssges = ['avatar_mssge_artifacts_sprintBacklog_one', 'avatar_mssge_artifacts_sprintBacklog_two']
+  avatarMssges = ['avatar_mssge_scrum-master_one', 'avatar_mssge_scrum-master_two', 'avatar_mssge_scrum-master_three']
 
   serviceTo = 'product-owner';
 
@@ -101,6 +101,7 @@ export default class ScrumMaster extends Vue {
         z-index: 900;
         font-size: 14px;
         padding-bottom: 2px;
+        color: black;
         &.active{
           padding-bottom: 0px;
           border-bottom: 2px solid $primary;
@@ -108,6 +109,7 @@ export default class ScrumMaster extends Vue {
         }
         &:hover{
           text-decoration: none;
+          color: black;
         }
         img {
           display: block;
@@ -136,6 +138,6 @@ export default class ScrumMaster extends Vue {
   }
   .item-description__info__desc__right[data-v-7fc88f69] {
     flex-basis: 100%;
-}
+  }
 }
 </style>

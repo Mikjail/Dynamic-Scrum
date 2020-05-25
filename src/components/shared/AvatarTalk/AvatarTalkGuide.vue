@@ -150,10 +150,10 @@ export default class AvatarTalkGuide extends Vue {
 <style lang="scss">
 .main-avatar {
   &__cloud-mssge {
-    padding: 5px 24px 10px;
+    padding: 6px 15px 35px 15px;
     &__btns {
       width: 100%;
-      bottom: 15px;
+      bottom: 5px;
       position: absolute;
       &__next {
         float: right;
