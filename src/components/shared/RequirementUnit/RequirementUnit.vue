@@ -17,6 +17,11 @@
       </div>
     </div>
 </template>
+<script>
+import { Vue, Component } from 'vue-property-decorator';
+@Component()
+export default class RequirementUnit extends Vue {}
+</script>
 <style lang="scss" scoped>
 .requirement {
   border: 1px solid $primary;

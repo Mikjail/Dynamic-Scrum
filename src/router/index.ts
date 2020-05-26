@@ -7,6 +7,7 @@ import Increment from '../views/artifacts/Increment.vue';
 import ScrumMaster from '../views/roles/ScrumMaster.vue';
 import ProductOwner from '../views/roles/ProductOwner.vue';
 import DevTeam from '../views/roles/DevTeam.vue';
+import SprintPlanning from '../views/events/SprintPlanning.vue';
 
 Vue.use(VueRouter);
 
@@ -45,6 +46,11 @@ const routes: Array<RouteConfig> = [
     path: '/dev-team',
     name: 'Developer Team',
     component: DevTeam
+  },
+  {
+    path: '/sprint-planning',
+    name: 'Sprint Planning',
+    component: SprintPlanning
   }
 ];
 
