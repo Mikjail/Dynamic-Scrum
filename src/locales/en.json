@@ -58,6 +58,7 @@
   "avatar_mssge_events_daily-scrum_one": "The Daily Scrum is a 15-minute time-boxed event for the Development Team. The Daily Scrum is held every day of the Sprint. At it, the Development Team plans work for the next 24 hours.",
   "avatar_mssge_events_daily-scrum_two": " This optimizes team collaboration and performance by inspecting the work since the last Daily Scrum and forecasting upcoming Sprint work.",
   "avatar_mssge_events_daily-scrum_three": "The Daily Scrum is held at the same time and place each day to reduce complexity.",
+  "avatar_mssge_events_sprint-review_one": "A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed.",
   "product-backlog_list_one": "A Product Backlog is never complete. It might change once you have a better understanging of the product",
   "product-backlog_list_two": "Product Backlog is dynamic; it constantly changes to identify what the product needs to be appropriate, competitive, and useful",
   "product-backlog_list_three": "For one product there is only one Product Backlog. Even though there is more than one Scrum Team.",
@@ -115,5 +116,17 @@
   "daily-scrum_three" : "The Development Team or team members often meet immediately after the Daily Scrum for detailed discussions, or to adapt, or replan, the rest of the Sprint’s work.",
   "daily-scrum_four" : "The Scrum Master ensures that the Development Team has the meeting, but the Development Team is responsible for conducting the Daily Scrum. The Scrum Master teaches the Development Team to keep the Daily Scrum within the 15-minute time-box.",
   "daily-scrum_five" : "The Daily Scrum is an internal meeting for the Development Team. If others are present, the Scrum Master ensures that they do not disrupt the meeting.",
-  "daily-scrum_six" : "Daily Scrums improve communications, eliminate other meetings, identify impediments to development for removal, highlight and promote quick decision-making, and improve the Development Team’s level of knowledge. This is a key inspect and adapt meeting."
+  "daily-scrum_six" : "Daily Scrums improve communications, eliminate other meetings, identify impediments to development for removal, highlight and promote quick decision-making, and improve the Development Team’s level of knowledge. This is a key inspect and adapt meeting.",
+  "sprint-review_one": "During the Sprint Review, the Scrum Team and stakeholders collaborate about what was done in the Sprint. Based on that and any changes to the Product Backlog during the Sprint, attendees collaborate on the next things that could be done to optimize value. This is an informal meeting, not a status meeting, and the presentation of the Increment is intended to elicit feedback and foster collaboration.",
+  "sprint-review_two": "This is at most a four-hour meeting for one-month Sprints. For shorter Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and that attendees understand its purpose. The Scrum Master teaches everyone involved to keep it within the time-box.",
+  "sprint-review_three": "The Sprint Review includes the following elements:",
+  "sprint-review_four": "The result of the Sprint Review is a revised Product Backlog that defines the probable Product Backlog items for the next Sprint. The Product Backlog may also be adjusted overall to meet new opportunities.",
+  "sprint-review_list_one": "Attendees include the Scrum Team and key stakeholders invited by the Product Owner;",
+  "sprint-review_list_two": "The Product Owner explains what Product Backlog items have been \"Done\" and what has not been \"Done\";",
+  "sprint-review_list_three": "The Development Team discusses what went well during the Sprint, what problems it ran into, and how those problems were solved;",
+  "sprint-review_list_four": "The Development Team demonstrates the work that it has \"Done\" and answers questions about the Increment;",
+  "sprint-review_list_five": "The Product Owner discusses the Product Backlog as it stands. He or she projects likely target and delivery dates based on progress to date (if needed);",
+  "sprint-review_list_six": "The entire group collaborates on what to do next, so that the Sprint Review provides valuable input to subsequent Sprint Planning;",
+  "sprint-review_list_seven": "Review of how the marketplace or potential use of the product might have changed what is the most valuable thing to do next; and,",
+  "sprint-review_list_eight": "Review of the timeline, budget, potential capabilities, and marketplace for the next anticipated releases of functionality or capability of the product."
 }
