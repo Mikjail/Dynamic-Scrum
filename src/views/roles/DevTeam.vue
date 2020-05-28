@@ -104,11 +104,5 @@ export default class DevTeam extends Vue {
         display: none;
       }
   }
-  .item-description__info__desc__prev {
-    display: none;
-  }
-  .item-description__info__desc__right {
-    flex-basis: 100%;
-  }
 }
 </style>

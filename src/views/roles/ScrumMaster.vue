@@ -101,7 +101,7 @@ export default class ScrumMaster extends Vue {
         z-index: 900;
         font-size: 14px;
         padding-bottom: 2px;
-        color: black;
+        color:$secondary;
         &.active{
           padding-bottom: 0px;
           border-bottom: 2px solid $primary;
@@ -109,7 +109,7 @@ export default class ScrumMaster extends Vue {
         }
         &:hover{
           text-decoration: none;
-          color: black;
+          color: $secondary;
         }
         img {
           display: block;
@@ -132,12 +132,6 @@ export default class ScrumMaster extends Vue {
       &__ownership{
         display: none;
       }
-  }
-  .item-description__info__desc__prev {
-    display: none;
-  }
-  .item-description__info__desc__right {
-    flex-basis: 100%;
   }
 }
 </style>

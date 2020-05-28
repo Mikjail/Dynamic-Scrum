@@ -14,8 +14,10 @@
         <div class="item-description__info__title">
           <h1>{{mainTitle}}</h1>
         </div>
-        <div class="d-flex item-description__info__desc">
-          <div class="item-description__info__desc__prev">
+        <div
+        class="d-flex item-description__info__desc">
+          <div class="item-description__info__desc__prev"
+          :style="customWidth ? `width:${customWidth}px`: ''">
             <slot name="item-preview"> </slot>
           </div>
           <div class="item-description__info__desc__right">
@@ -38,6 +40,8 @@ export default class ProductBacklog extends Vue {
   @Prop({ default: '' }) mainTitle!: string;
 
   @Prop() avatarMssges!: Array<string>;
+
+  @Prop({ default: '' }) customWidth!: string;
 }
 </script>
 <style lang="scss" scoped>

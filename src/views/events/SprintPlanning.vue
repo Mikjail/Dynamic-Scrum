@@ -163,20 +163,4 @@ h5 {
     margin-left: 24px;
   }
 }
-@media only screen and (max-width: 1000px){
-  .sprint-backlog{
-      &__preview{
-        display: none;
-      }
-      &__ownership{
-        display: none;
-      }
-  }
-  .item-description__info__desc__prev {
-    display: none;
-  }
-  .item-description__info__desc__right[data-v-7fc88f69] {
-    flex-basis: 100%;
-}
-}
 </style>
