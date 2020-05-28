@@ -77,39 +77,6 @@ export default class DaiyScrum extends Vue {
     'daily-scrum_five',
     'daily-scrum_six'
   ]
-
-  sprintPlanningTopics = {
-    what: {
-      title: 'daily-scrum_what_title',
-      desc: [
-        'daily-scrum_what_one',
-        'daily-scrum_what_two',
-        'daily-scrum_what_three'
-      ]
-    },
-    how: {
-      title: 'daily-scrum_how_title',
-      desc: [
-        'daily-scrum_how_one',
-        'daily-scrum_how_two',
-        'daily-scrum_how_three',
-        'daily-scrum_how_four'
-      ]
-    },
-    goal: {
-      title: 'daily-scrum_goal_title',
-      desc: [
-        'daily-scrum_goal_one',
-        'daily-scrum_goal_two'
-      ]
-    }
-  }
-
-  topicSelected = 'what';
-
-  isActive(topic: string) {
-    return { active: topic === this.topicSelected };
-  }
 }
 </script>
 <style lang="scss">
