@@ -8,6 +8,7 @@ import ScrumMaster from '../views/roles/ScrumMaster.vue';
 import ProductOwner from '../views/roles/ProductOwner.vue';
 import DevTeam from '../views/roles/DevTeam.vue';
 import SprintPlanning from '../views/events/SprintPlanning.vue';
+import DailyScrum from '../views/events/DailyScrum.vue';
 
 Vue.use(VueRouter);
 
@@ -51,6 +52,11 @@ const routes: Array<RouteConfig> = [
     path: '/sprint-planning',
     name: 'Sprint Planning',
     component: SprintPlanning
+  },
+  {
+    path: '/daily-scrum',
+    name: 'Daily Scrum',
+    component: DailyScrum
   }
 ];
 
