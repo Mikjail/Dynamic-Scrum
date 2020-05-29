@@ -17,7 +17,7 @@
           <img src="@/assets/three_v-arrows.svg"
             alt=""
             class="daily-scrum__preview__item">
-          <div class="d-flex justify-content-center daily-scrum__preview__item--answer">
+          <div class="d-flex justify-content-center daily-scrum__preview__item">
             <h5>
                 What did I do yesterday ?
             </h5>
@@ -108,21 +108,6 @@ h5 {
         align-self: center;
         h5 {
           width: 80px;
-        }
-      }
-      &--answer {
-        margin-bottom: 28px;
-        a{
-           &:first-child{
-            flex-basis: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-          }
-           &:nth-child(2){
-            flex-basis: 40%;
-          }
-          margin-bottom: 2px;
         }
       }
     }

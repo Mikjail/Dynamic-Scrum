@@ -59,6 +59,7 @@
   "avatar_mssge_events_daily-scrum_two": " This optimizes team collaboration and performance by inspecting the work since the last Daily Scrum and forecasting upcoming Sprint work.",
   "avatar_mssge_events_daily-scrum_three": "The Daily Scrum is held at the same time and place each day to reduce complexity.",
   "avatar_mssge_events_sprint-review_one": "A Sprint Review is held at the end of the Sprint to inspect the Increment and adapt the Product Backlog if needed.",
+  "avatar_mssge_events_sprint-retro_one": "The Sprint Retrospective is an opportunity for the Scrum Team to inspect itself and create a plan for improvements to be enacted during the next Sprint.",
   "product-backlog_list_one": "A Product Backlog is never complete. It might change once you have a better understanging of the product",
   "product-backlog_list_two": "Product Backlog is dynamic; it constantly changes to identify what the product needs to be appropriate, competitive, and useful",
   "product-backlog_list_three": "For one product there is only one Product Backlog. Even though there is more than one Scrum Team.",
@@ -128,5 +129,13 @@
   "sprint-review_list_five": "The Product Owner discusses the Product Backlog as it stands. He or she projects likely target and delivery dates based on progress to date (if needed);",
   "sprint-review_list_six": "The entire group collaborates on what to do next, so that the Sprint Review provides valuable input to subsequent Sprint Planning;",
   "sprint-review_list_seven": "Review of how the marketplace or potential use of the product might have changed what is the most valuable thing to do next; and,",
-  "sprint-review_list_eight": "Review of the timeline, budget, potential capabilities, and marketplace for the next anticipated releases of functionality or capability of the product."
+  "sprint-review_list_eight": "Review of the timeline, budget, potential capabilities, and marketplace for the next anticipated releases of functionality or capability of the product.",
+  "sprint-retro_one": "The Sprint Retrospective occurs after the Sprint Review and prior to the next Sprint Planning. This is at most a three-hour meeting for one-month Sprints. For shorter Sprints, the event is usually shorter. The Scrum Master ensures that the event takes place and that attendants understand its purpose.",
+  "sprint-retro_two": "The Scrum Master ensures that the meeting is positive and productive. The Scrum Master teaches all to keep it within the time-box. The Scrum Master participates as a peer team member in the meeting from the accountability over the Scrum process.",
+  "sprint-retro_three": "The purpose of the Sprint Retrospective is to:",
+  "sprint-retro_four": "The Scrum Master encourages the Scrum Team to improve, within the Scrum process framework, its development process and practices to make it more effective and enjoyable for the next Sprint. During each Sprint Retrospective, the Scrum Team plans ways to increase product quality by improving work processes or adapting the definition of \"Done\", if appropriate and not in conflict with product or organizational standards.",
+  "sprint_retro_five": "By the end of the Sprint Retrospective, the Scrum Team should have identified improvements that it will implement in the next Sprint. Implementing these improvements in the next Sprint is the adaptation to the inspection of the Scrum Team itself. Although improvements may be implemented at any time, the Sprint Retrospective provides a formal opportunity to focus on inspection and adaptation.",
+  "sprint-retro_list_one": "Inspect how the last Sprint went with regards to people, relationships, process, and tools;",
+  "sprint-retro_list_two": "Identify and order the major items that went well and potential improvements; and,",
+  "sprint-retro_list_three": "Create a plan for implementing improvements to the way the Scrum Team does its work."
 }

@@ -10,6 +10,7 @@ import DevTeam from '../views/roles/DevTeam.vue';
 import SprintPlanning from '../views/events/SprintPlanning.vue';
 import DailyScrum from '../views/events/DailyScrum.vue';
 import SprintReview from '../views/events/SprintReview.vue';
+import Retrospective from '../views/events/Retrospective.vue';
 
 Vue.use(VueRouter);
 
@@ -61,8 +62,13 @@ const routes: Array<RouteConfig> = [
   },
   {
     path: '/sprint-review',
-    name: 'Daily Scrum',
+    name: 'Sprint Review',
     component: SprintReview
+  },
+  {
+    path: '/sprint-retro',
+    name: 'Retrospective',
+    component: Retrospective
   }
 ];
 
