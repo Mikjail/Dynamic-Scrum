@@ -64,4 +64,5 @@ export interface SubItem {
   name: MssgeType;
   imgSrc: string;
   routeSrc? : string;
+  avatarMssg?: string;
 }

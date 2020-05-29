@@ -7,11 +7,9 @@
         src="@/assets/product-backlog/product_backlog_panel.svg" alt="">
     </template>
     <template v-slot:item-description>
-        <ul>
-          <li v-for="(pbLi, index) in productBacklogDef" :key="`pb-${index}`">
-            {{$t(pbLi)}}
-          </li>
-        </ul>
+        <p v-for="(pbLi, index) in productBacklogDef" :key="`pb-${index}`">
+          {{$t(pbLi)}}
+        </p>
         <div class="product-backlog__ownership">
           <img src="@/assets/product-backlog/ownership.svg" alt="">
         </div>
@@ -29,10 +27,12 @@ import ItemDescription from '@/components/shared/ItemDescription/ItemDescription
 })
 export default class SprintBacklog extends Vue {
   productBacklogDef = [
-    'product-backlog_list_one',
-    'product-backlog_list_two',
-    'product-backlog_list_three',
-    'product-backlog_list_four'
+    'product-backlog_one',
+    'product-backlog_two',
+    'product-backlog_three',
+    'product-backlog_four',
+    'product-backlog_five',
+    'product-backlog_six'
   ];
 
   avatarMssges = ['avatar_mssge_artifacts_backlog_one']

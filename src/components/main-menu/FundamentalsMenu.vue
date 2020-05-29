@@ -13,8 +13,10 @@
           </router-link>
         </template>
         <template v-else>
-          <img :src="require(`@/assets/UI/Icons/${fundamental.imgSrc}.svg`)" alt="">
-          <p>{{$t(fundamental.name)}}</p>
+          <a href="javascript:void(0)" @click="subItemSelected(fundamental)">
+            <img :src="require(`@/assets/UI/Icons/${fundamental.imgSrc}.svg`)" alt="">
+            <p>{{$t(fundamental.name)}}</p>
+          </a>
         </template>
       </div>
     </div>

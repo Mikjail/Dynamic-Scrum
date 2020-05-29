@@ -71,7 +71,7 @@ export default class Home extends Vue {
 
   arrowActive = '';
 
-  mssgeType = MssgeType.VALUES;
+  mssgeType: string = MssgeType.VALUES;
 
   mssge = homeMssges
 
