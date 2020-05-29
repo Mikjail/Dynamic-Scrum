@@ -3,7 +3,7 @@
       mainTitle="Product Increment"
       :avatarMssges="avatarMssges">
         <template v-slot:item-preview>
-            <div class="product-increment__preview d-flex flex-column">
+            <div class="product-increment__preview d-flex flex-column align-items-center">
               <requirement-unit> </requirement-unit>
               <img src="@/assets/arrow_down.svg" alt="">
               <div class="d-flex justify-content-center product-increment__preview__done">
@@ -48,6 +48,7 @@ h5 {
 }
 .product-increment{
   &__preview {
+    margin-left: 80px;
     &>img{
       margin-bottom: 32px;
     }
@@ -62,21 +63,5 @@ h5 {
       }
     }
   }
-}
-@media only screen and (max-width: 1000px){
-  .sprint-backlog{
-      &__preview{
-        display: none;
-      }
-      &__ownership{
-        display: none;
-      }
-  }
-  .item-description__info__desc__prev {
-    display: none;
-  }
-  .item-description__info__desc__right[data-v-7fc88f69] {
-    flex-basis: 100%;
-}
 }
 </style>

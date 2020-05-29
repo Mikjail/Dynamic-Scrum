@@ -83,9 +83,6 @@ export default class ProductOwner extends Vue {
       }
     }
   }
-  &__desc{
-    margin-left: 24px;
-  }
 }
 
 @media only screen and (max-width: 1000px){

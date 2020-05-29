@@ -3,28 +3,28 @@
   mainTitle="Scrum Master"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
-      <div class="d-flex justify-content-end sprint-backlog__preview">
+      <div class="d-flex justify-content-end scrum-master__preview">
         <img
         src="@/assets/scrum-master/scrum_master_prev.svg" alt="">
-        <div class="d-flex flex-column sprint-backlog__preview__menu">
+        <div class="d-flex flex-column scrum-master__preview__menu">
           <a href="javascript:void(0)"
             @click="serviceTo = 'product-owner'"
             :class="isActive('product-owner')"
-            class="d-flex flex-column align-items-center sprint-backlog__preview__menu__item">
+            class="d-flex flex-column align-items-center scrum-master__preview__menu__item">
             <img src="@/assets/scrum-master/po_icon.svg" alt="">
             <span> Product Owner </span>
           </a>
           <a href="javascript:void(0)"
             @click="serviceTo = 'development-team'"
             :class="isActive('development-team')"
-            class="d-flex flex-column align-items-center sprint-backlog__preview__menu__item">
+            class="d-flex flex-column align-items-center scrum-master__preview__menu__item">
             <img src="@/assets/scrum-master/dt_icon.svg" alt="">
             <span>Develpment Team</span>
           </a>
           <a href="javascript:void(0)"
             @click="serviceTo = 'organization'"
             :class="isActive('organization')"
-            class="d-flex flex-column align-items-center sprint-backlog__preview__menu__item">
+            class="d-flex flex-column align-items-center scrum-master__preview__menu__item">
             <img src="@/assets/scrum-master/org_icon.svg" alt="">
             <span> Organization</span>
           </a>
@@ -32,7 +32,7 @@
       </div>
     </template>
     <template v-slot:item-description>
-        <div class="sprint-backlog__desc">
+        <div class="scrum-master__desc">
            <ul>
           <li v-for="(smDesc, index) in scrumMasterDesc[serviceTo]" :key="`pb-${index}`">
             {{$t(smDesc)}}
@@ -88,7 +88,7 @@ export default class ScrumMaster extends Vue {
 }
 </script>
 <style lang="scss">
-.sprint-backlog{
+.scrum-master{
   &__preview {
     width: 340px;
     > img {
@@ -119,19 +119,9 @@ export default class ScrumMaster extends Vue {
     }
   }
   &__desc{
-    margin-left: 24px;
-  }
-}
-
-
-@media only screen and (max-width: 1000px){
-  .sprint-backlog{
-      &__preview{
-        display: none;
-      }
-      &__ownership{
-        display: none;
-      }
+    ul {
+      padding-left:5px;
+    }
   }
 }
 </style>

@@ -3,16 +3,18 @@
   mainTitle="Product Backlog"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
-        <img class="product-backlog__preview"
+    <div class="d-flex flex-column align-items-center product-backlog__preview">
+        <div class="product-backlog__preview__ownership">
+          <img src="@/assets/product-backlog/ownership.svg" alt="">
+        </div>
+        <img class="product-backlog__preview__panel"
         src="@/assets/product-backlog/product_backlog_panel.svg" alt="">
+    </div>
     </template>
     <template v-slot:item-description>
         <p v-for="(pbLi, index) in productBacklogDef" :key="`pb-${index}`">
           {{$t(pbLi)}}
         </p>
-        <div class="product-backlog__ownership">
-          <img src="@/assets/product-backlog/ownership.svg" alt="">
-        </div>
     </template>
   </item-description>
 </template>
@@ -40,14 +42,14 @@ export default class SprintBacklog extends Vue {
 </script>
 <style lang="scss">
 .product-backlog {
-  &__ownership{
-    position: relative;
-    width: 30%;
-    margin-top: 100px;
-    margin-left: 25px;
-  }
   &__preview{
+    &__ownership{
+      margin-left: 120px;
+      margin-bottom: 24px;
+    }
+    &__panel{
       @include shadow-panel;
+    }
   }
 }
 

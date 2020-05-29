@@ -33,8 +33,8 @@ export default class SprintBacklog extends Vue {
 </script>
 <style lang="scss">
 .sprint-backlog{
-  &__desc{
-    margin-left: 24px;
+  &__preview{
+    width: 380px;
   }
   &__ownership {
     margin-top: 100px;
@@ -50,11 +50,5 @@ export default class SprintBacklog extends Vue {
         display: none;
       }
   }
-  .item-description__info__desc__prev {
-    display: none;
-  }
-  .item-description__info__desc__right[data-v-7fc88f69] {
-    flex-basis: 100%;
-}
 }
 </style>

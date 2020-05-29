@@ -1,6 +1,5 @@
 <template>
   <item-description
-  customWidth="425"
   mainTitle="Sprint Retrospective"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>

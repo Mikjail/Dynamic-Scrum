@@ -1,6 +1,6 @@
 <template>
   <item-description
-  customWidth="456"
+  customWidth="385"
   mainTitle="Daily Scrum"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
@@ -117,7 +117,6 @@ h5 {
       margin-bottom: 20px;
       @include main-title-font;
     }
-    margin-left: 24px;
   }
 }
 </style>

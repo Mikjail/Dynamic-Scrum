@@ -17,7 +17,7 @@
         <div
         class="d-flex item-description__info__desc">
           <div class="item-description__info__desc__prev"
-          :style="customWidth ? `width:${customWidth}px`: ''">
+          :style="customWidth ? `width:${customWidth}px`: 'width:35%;'">
             <slot name="item-preview"> </slot>
           </div>
           <div class="item-description__info__desc__right">

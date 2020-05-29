@@ -1,6 +1,6 @@
 <template>
   <item-description
-  customWidth="456"
+  customWidth="375"
   mainTitle="Sprint Review"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
@@ -83,6 +83,7 @@ h5 {
 }
 .sprint-review{
   &__preview {
+    margin-left: 60px;
     a {
       color: $secondary;
       &.active{
@@ -103,21 +104,6 @@ h5 {
           width: 80px;
         }
       }
-      &--answer {
-        margin-bottom: 28px;
-        a{
-           &:first-child{
-            flex-basis: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-          }
-           &:nth-child(2){
-            flex-basis: 40%;
-          }
-          margin-bottom: 2px;
-        }
-      }
     }
   }
   &__desc {
@@ -125,7 +111,6 @@ h5 {
       margin-bottom: 20px;
       @include main-title-font;
     }
-    margin-left: 24px;
   }
 }
 </style>
