@@ -75,9 +75,14 @@ export default class Home extends Vue {
 
   mssge = homeMssges
 
+  beforeMount() {
+    this.menuItem = localStorage.getItem('dsSelectedMenu') || MssgeType.VALUES;
+  }
+
   selectMenu(menuItem: MssgeType) {
     this.menuItem = '';
     this.mssgeType = menuItem;
+    localStorage.setItem('dsSelectedMenu', menuItem);
     setTimeout(() => {
       this.menuItem = menuItem;
     }, 100);

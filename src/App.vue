@@ -1,27 +1,36 @@
 <template>
   <div id="app" class="app">
+    <div class="app__menu">
+      <router-link
+        v-if="this.$route.path !== '/'"
+        to="/"
+        class="app__menu__back-btn"
+        tag="a">
+        <span> Back </span>
+      </router-link>
+      <div class="app__menu__language float-right">
+        <div class="app__menu__language__selected"
+          @click="showList = !showList">
+          <img class="float-right"
+          src="@/assets/UI/Icons/world.svg"
+          alt="">
+          |
+          {{selectedLang}}
+        </div>
+         <template v-if="showList">
+          <div
+          @click="selectLang(lang.type)"
+          class="app__menu__language__to-select"
+          v-for="lang in languages"
+          :key="lang.type">
+            <img :src="require(`@/assets/${lang.flag}.svg`)" alt="">
+            {{lang.type}}
+          </div>
+      </template>
+      </div>
+    </div>
     <div class="app__container">
       <div class="container">
-          <div class="app__language float-right">
-            <div class="app__language__selected"
-              @click="showList = !showList">
-              <img class="float-right"
-              src="@/assets/UI/Icons/world.svg"
-              alt="">
-              |
-              {{selectedLang}}
-            </div>
-            <template v-if="showList">
-                <div
-                @click="selectLang(lang.type)"
-                class="app__language__to-select"
-                v-for="lang in languages"
-                :key="lang.type">
-                  <img :src="require(`@/assets/${lang.flag}.svg`)" alt="">
-                  {{lang.type}}
-                </div>
-            </template>
-          </div>
       </div>
       <transition name="fade" mode="out-in">
         <router-view />
@@ -80,27 +89,55 @@ body{
   .container{
     position: relative;
   }
-  &__language{
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 6px 22px #ebeaec;
-    border-radius: 4px;
-    width: 80px;
-    min-height: 30px;
-    padding: 0 10px;
-    margin-top: 16px;
-    display: inline-block;
-    position: fixed;
-    right: 25px;
+  &__menu{
+
+    position:fixed;
+    width: 100%;
+    padding: 16px 25px;
+
     z-index: 900;
-    &__selected,
-    &__to-select {
+    &__back-btn {
       display: flex;
-      justify-content: space-evenly;
-       text-transform: capitalize;
+      justify-content: center;
+      align-items: center;
+      background: url('./assets/back-btn.svg') no-repeat center;
+      width: 60px;
+      height: 30px;
+      position: relative;
+      border: none;
+      color: black;
+      float:left;
+      @include main-title-font;
+      font-size: 14px;
+      &:hover{
+        text-decoration: none;
+      }
+      span{
+        position: relative;
+        top: -2px;
+        left: 4px;
+      }
+    }
+    &__language{
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 6px 22px #ebeaec;
+      border-radius: 4px;
+      width: 80px;
+      min-height: 30px;
+      padding: 0 10px;
+      right: 25px;
+      z-index: 900;
+      &__selected,
+      &__to-select {
+        display: flex;
+        justify-content: space-evenly;
+        text-transform: capitalize;
+      }
     }
   }
+
 }
 
 .btn-outline-primary {

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="61px" height="24px" viewBox="0 0 61 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Dynamic-Scrum" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Product-Backlog" transform="translate(-309.000000, -12.000000)" fill-rule="nonzero" stroke="#137FFF" stroke-width="2">
+            <path d="M323.319509,13 L365,13 C367.209139,13 369,14.790861 369,17 L369,31 C369,33.209139 367.209139,35 365,35 L323.319509,35 C322.457877,35.0000094 321.619278,34.721787 320.92852,34.2067508 C313.874418,28.9471351 310.347366,25.5448848 310.347366,24 C310.347366,22.4551148 313.87442,19.052863 320.928526,13.7932448 C321.619287,13.2782208 322.457882,13 323.319509,13 Z" id="Rectangle"></path>
+        </g>
+    </g>
+</svg>
