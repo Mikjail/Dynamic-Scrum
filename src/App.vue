@@ -23,7 +23,9 @@
             </template>
           </div>
       </div>
-    <router-view />
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </div>
     <div class="not-supported">
         <not-supported> </not-supported>
@@ -89,8 +91,8 @@ body{
     padding: 0 10px;
     margin-top: 16px;
     display: inline-block;
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: 25px;
     z-index: 900;
     &__selected,
     &__to-select {
@@ -126,5 +128,11 @@ body{
   body{
     background: linear-gradient(white 90%, #005cff 20%);
   }
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s, trasnform 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
 }
 </style>
