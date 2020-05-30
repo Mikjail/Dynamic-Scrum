@@ -103,7 +103,7 @@ export default class FundamentalsMenu extends Vue {
         a{
           align-items: center;
           img {
-            height: 40px;
+            height: 35px;
           }
           p{
             font-size: 10px;
