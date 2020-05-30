@@ -1,6 +1,6 @@
 <template name="fade">
     <item-description
-      mainTitle="Product Increment"
+      :mainTitle="$t('artifact_increment')"
       :avatarMssges="avatarMssges">
         <template v-slot:item-preview>
             <div class="product-increment__preview d-flex flex-column align-items-center">
@@ -8,7 +8,7 @@
               <img src="@/assets/arrow_down.svg" alt="">
               <div class="d-flex justify-content-center product-increment__preview__done">
                 <span>
-                  Items Meets definition of Done
+                  {{$t('product-increment_done')}}
                 </span>
                 <img src="@/assets/product-increment/done_icon.svg" alt="">
               </div>
@@ -27,8 +27,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
-import RequirementUnit from '@/components/shared/RequirementUnit/RequirementUnit.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
+import RequirementUnit from '@/components/RequirementUnit/RequirementUnit.vue';
 @Component({
   components: {
     ItemDescription,
@@ -61,6 +61,14 @@ h5 {
         width: 70px;
         margin-right: 10px;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px){
+ .product-increment{
+    &__preview {
+      margin-left: 0;
     }
   }
 }

@@ -70,7 +70,7 @@ export default class FundamentalsMenu extends Vue {
 </script>
 <style lang="scss">
 .subitems {
-  height: 20vh;
+  height: 100%;
   display: flex;
   align-items: center;
   &__container{
@@ -93,6 +93,23 @@ export default class FundamentalsMenu extends Vue {
 @media only screen and (min-height: 900px) {
   .subitems {
     bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .subitems {
+    justify-content: space-evenly !important;
+      &__container{
+        a{
+          align-items: center;
+          img {
+            height: 40px;
+          }
+          p{
+            font-size: 10px;
+          }
+        }
+      }
   }
 }
 </style>

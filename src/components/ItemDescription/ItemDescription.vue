@@ -1,12 +1,15 @@
 <template>
   <div class="container item-description">
+      <div class="item-description__info__title--xs">
+          <h1>{{mainTitle}}</h1>
+      </div>
       <div class="item-description__avatar">
         <avatar-talk-guide
           :mssges="avatarMssges"
           mssgWidth="300"
           mssgHeight="180"
           :avatarBg="false"
-          cloudDirection="left">
+          :cloudDirection="window.width > 1300 ? 'left' : 'center'">
         </avatar-talk-guide>
       </div>
       <div class="row">
@@ -30,7 +33,7 @@
 </template>
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator';
-import AvatarTalkGuide from '@/components/shared/AvatarTalk/AvatarTalkGuide.vue';
+import AvatarTalkGuide from '@/components/AvatarTalk/AvatarTalkGuide.vue';
 @Component({
   components: {
     AvatarTalkGuide
@@ -42,6 +45,17 @@ export default class ProductBacklog extends Vue {
   @Prop() avatarMssges!: Array<string>;
 
   @Prop({ default: '' }) customWidth!: string;
+
+  window = { width: 0 };
+
+  created() {
+    window.addEventListener('resize', this.handleResize);
+    this.handleResize();
+  }
+
+  handleResize() {
+    this.window.width = window.innerWidth;
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -55,6 +69,9 @@ export default class ProductBacklog extends Vue {
     &__info{
       padding-top: 60px;
       &__title{
+        &--xs{
+            display:none;
+        }
         h1{
           @include main-title-font;
         }
@@ -68,7 +85,7 @@ export default class ProductBacklog extends Vue {
         &__right{
           flex-basis: 65%;
           ul {
-            list-style-image: url('../../../assets/bullet.svg');
+            list-style-image: url('../../assets/bullet.svg');
             li{
               margin-bottom: 20px;
             }
@@ -83,22 +100,41 @@ export default class ProductBacklog extends Vue {
       }
     }
   }
-  @media only screen and (max-width: 1200px){
-  .item-description{
-      &__avatar{
-        display: none;
-      }
-    }
-  }
-   @media only screen and (max-width: 800px){
+  @media only screen and (max-width: 1300px){
     .item-description{
+      &__avatar{
+        display: block;
+        width: 100%;
+        position:relative;
+        .main-avatar{
+          padding-top: 16px;
+        }
+      }
       &__info{
+        padding: 16px;
+        &__title{
+          display:none;
+          &--xs{
+            display:block;
+            margin-top: 80px;
+            text-align:center;
+            @include main-title-font;
+          }
+        }
         &__desc{
+          margin-top: 0;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           &__prev{
-            display:none;
+            display: flex;
+            justify-content: center;
+            width: 100% !important;
+            text-align: center;
           }
           &__right{
             flex-basis: 100%;
+            margin-top: 24px;
           }
         }
       }

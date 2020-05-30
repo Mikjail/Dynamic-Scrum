@@ -36,9 +36,9 @@
         <router-view />
       </transition>
     </div>
-    <div class="not-supported">
+    <!-- <div class="not-supported">
         <not-supported> </not-supported>
-    </div>
+    </div> -->
   </div>
 </template>
 <script lang="ts">
@@ -62,7 +62,13 @@ export default class App extends Vue {
 
   showList = false;
 
+  beforeMount() {
+    this.selectedLang = localStorage.getItem('DSlanguage') || 'en';
+    this.$i18n.locale = this.selectedLang;
+  }
+
   selectLang(lang: string) {
+    localStorage.setItem('DSlanguage', lang);
     this.selectedLang = lang;
     this.showList = false;
     this.$i18n.locale = lang;
@@ -90,12 +96,10 @@ body{
     position: relative;
   }
   &__menu{
-
     position:fixed;
     width: 100%;
     padding: 16px 25px;
-
-    z-index: 900;
+    z-index: 1000;
     &__back-btn {
       display: flex;
       justify-content: center;
@@ -122,6 +126,7 @@ body{
       cursor: pointer;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       box-shadow: 0 6px 22px #ebeaec;
       border-radius: 4px;
       width: 80px;
@@ -131,9 +136,11 @@ body{
       z-index: 900;
       &__selected,
       &__to-select {
+        height: 30px;
         display: flex;
         justify-content: space-evenly;
         text-transform: capitalize;
+        align-items: center;
       }
     }
   }
@@ -146,26 +153,26 @@ body{
   }
 }
 
-@media only screen and(min-width: 625px){
-  .not-supported{
-    display:none;
+@media only screen and (max-width: 1300px) {
+  .app {
+    &__menu{
+      height: 60px;
+      background-color: $primary;
+      top: 0;
+        &__back-btn {
+          background: url('./assets/xs_back-btn.svg') no-repeat center;
+          width: 74px;
+          color: white;
+        }
+        &__language{
+           box-shadow: 0 6px 22px black;
+           background-color: white;
+           position: absolute;
+        }
+    }
   }
 }
 
-@media only screen and(max-width: 625px){
-  .app__container{
-    display:none;
-  }
-  .not-supported{
-    display: flex;
-    padding-top: 25%;
-    justify-content: center;
-    height: 100%;
-  }
-  body{
-    background: linear-gradient(white 90%, #005cff 20%);
-  }
-}
 .fade-enter-active, .fade-leave-active {
   transition: opacity 0.2s, trasnform 0.2s;
 }

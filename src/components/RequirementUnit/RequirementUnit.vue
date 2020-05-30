@@ -9,7 +9,7 @@
       </div>
       <div class="d-flex justify-content-between requirement__bottom">
         <span class="requirement__bottom__desc">
-          Create login/logout view
+          {{$t('requirement_desc')}}
         </span>
         <span class="requirement__bottom__sp">
             5

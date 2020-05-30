@@ -1,6 +1,6 @@
 <template>
   <item-description
-  mainTitle="Product Owner"
+  :mainTitle="$t('roles_product-owner')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
       <div class="d-flex justify-content-end product-owner__preview">
@@ -9,7 +9,7 @@
         <div class="d-flex flex-column product-owner__preview__menu">
           <div  class="d-flex flex-column align-items-center product-owner__preview__menu__item">
             <img src="@/assets/product-owner/product_backlog_icon.svg" alt="">
-            <span> Product Backlog </span>
+            <span>{{$t('artifact_product-backlog')}}</span>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
 @Component({
   components: {
     ItemDescription

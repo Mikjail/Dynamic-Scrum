@@ -235,7 +235,7 @@ export default class AvatarTalkGuide extends Vue {
     background: $primary-gradient;
     &--no-bg{
       background: none;
-       margin-top: 10px;
+       margin-top: 20px;
     }
   }
   &__typing {
@@ -251,5 +251,22 @@ export default class AvatarTalkGuide extends Vue {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+@media only screen and (max-width: 500px){
+  .main-avatar{
+    padding: 48px 20px 0px 20px;
+      &__cloud-mssge--center,
+      &__cloud-mssge--left{
+        width: 100% !important;
+      }
+      &__img{
+        height: 100px;
+        width: 100px;
+        img{
+          width: 60px;
+        }
+      }
+  }
 }
 </style>

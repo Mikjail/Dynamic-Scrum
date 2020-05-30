@@ -1,11 +1,11 @@
 <template>
   <item-description
-  mainTitle="Sprint Retrospective"
+  :mainTitle="$t('events_sprint-retro')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
         <div class="d-flex flex-column sprint-retro__preview">
           <h5 class="sprint-retro__preview__item">
-            3hs for one-month sprint
+            {{$t('sprint-retro_event-time')}}
           </h5>
           <img src="@/assets/sprint-retro/sprint_retro.svg"
               alt=""
@@ -16,38 +16,38 @@
           <div class="d-flex justify-content-between sprint-retro__preview__item__does">
             <div class="sprint-retro__preview__item__does__item">
               <h5>
-                  Inspect
+                  {{$t('inspect')}}
               </h5>
               <img class="sprint-retro__preview__item"
                 src="@/assets/arrow_down.svg"
                 alt="">
               <img src="@/assets/sprint-retro/relationships.svg" alt="">
               <h5>
-                People relationships, proccess and tools
+               {{$t('sprint-retro_inspect')}}
               </h5>
             </div>
             <div class="sprint-retro__preview__item__does__item">
               <h5>
-                  Identify
+                  {{$t('identify')}}
               </h5>
               <img class="sprint-retro__preview__item"
                 src="@/assets/arrow_down.svg"
                 alt="">
               <img src="@/assets/sprint-retro/improvement.svg" alt="">
               <h5>
-                Items that went well
+                {{$t('sprint-retro_identify')}}
               </h5>
             </div>
             <div class="sprint-retro__preview__item__does__item">
               <h5>
-                  Create
+                  {{$t('create')}}
               </h5>
               <img class="sprint-retro__preview__item"
                 src="@/assets/arrow_down.svg"
                 alt="">
               <img src="@/assets/sprint-retro/plan.svg" alt="">
               <h5>
-                New plan of work
+                {{$t('sprint-retro_create')}}
               </h5>
             </div>
           </div>
@@ -55,13 +55,13 @@
             src="@/assets/arrow_down.svg"
             alt="">
             <h5 class="sprint-retro__preview__item">
-              Inspect and Adapt
+              {{$t('inspect-adapt')}}
             </h5>
           <img class="sprint-retro__preview__item"
             src="@/assets/arrow_down.svg"
             alt="">
             <h5>
-              Sprint Goal
+              {{$t('sprint-goal')}}
             </h5>
         </div>
     </template>
@@ -85,8 +85,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
-import RequirementUnit from '@/components/shared/RequirementUnit/RequirementUnit.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
+import RequirementUnit from '@/components/RequirementUnit/RequirementUnit.vue';
 @Component({
   components: {
     ItemDescription,

@@ -1,12 +1,12 @@
 <template>
   <item-description
   customWidth="375"
-  mainTitle="Sprint Review"
+  :mainTitle="$t('events_sprint-review')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
         <div class="d-flex flex-column sprint-review__preview">
           <h5 class="sprint-review__preview__item">
-            4hs for one-month sprint
+             {{$t('sprint-review_event-time')}}
           </h5>
           <img src="@/assets/sprint-review/sprint_review_icon.svg"
             alt=""
@@ -15,7 +15,7 @@
             alt=""
             class="sprint-review__preview__item">
           <h5>
-              Inspect and Adapt
+              {{$t('inspect-adapt')}}
           </h5>
           <img src="@/assets/product-increment/increment_icon.svg"
             alt=""
@@ -23,7 +23,9 @@
           <img class="sprint-review__preview__item"
             src="@/assets/arrow_down.svg"
             alt="">
-          <h5>Refactor Produt Backlog (if needed)</h5>
+          <h5>
+            {{$t('sprint-review_refactor')}}
+          </h5>
           <img class="sprint-review__preview__item"
             src="@/assets/product-owner/product_backlog_icon.svg"
             alt="">
@@ -47,8 +49,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
-import RequirementUnit from '@/components/shared/RequirementUnit/RequirementUnit.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
+import RequirementUnit from '@/components/RequirementUnit/RequirementUnit.vue';
 @Component({
   components: {
     ItemDescription,
@@ -110,6 +112,14 @@ h5 {
     h4 {
       margin-bottom: 20px;
       @include main-title-font;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px){
+ .sprint-review{
+    &__preview {
+      margin-left: 0;
     }
   }
 }

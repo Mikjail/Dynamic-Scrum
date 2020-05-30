@@ -58,7 +58,7 @@
 </template>
 <script lang="ts">
 import FundamentalsMenu from '@/components/main-menu/FundamentalsMenu.vue';
-import AvatarTalkGuide from '@/components/shared/AvatarTalk/AvatarTalkGuide.vue';
+import AvatarTalkGuide from '@/components/AvatarTalk/AvatarTalkGuide.vue';
 import { FundamentalsEnum, MssgeType, SubItem } from '@/components/main-menu/Fundamentals';
 import { homeMssges } from '@/components/main-menu/Mssges';
 
@@ -174,6 +174,30 @@ body {
     height: 100%;
     &__avatar-talk {
       padding-top: 80px;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home {
+    height: 100%;
+    &__main-title{
+      height: 100px;
+    }
+    &__main-menu{
+      margin-top: 0;
+      &__nav-item{
+        h4{
+          font-size: 20px;
+        }
+      }
+    }
+    &__arrows {
+      display:none !important;
+    }
+    &__footer{
+      background-color: $primary;
+      height: 12%;
     }
   }
 }

@@ -1,11 +1,11 @@
 <template>
   <item-description
-  mainTitle="Sprint Backlog"
+  :mainTitle="$t('artifact_sprint-backlog')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
         <img
         class="sprint-backlog__preview"
-        src="@/assets/sprint-backlog/sprint_backlog_panel.svg" alt="">
+        :src="require(`@/assets/sprint-backlog/${$t('sprint-backlog_img')}`)" alt="">
     </template>
     <template v-slot:item-description>
         <div class="sprint-backlog__desc">
@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
 @Component({
   components: {
     ItemDescription
@@ -41,10 +41,25 @@ export default class SprintBacklog extends Vue {
   }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and ( min-width: 600px) and (max-width: 1300px){
+  .sprint-backlog {
+      &__preview{
+        left: -50px;
+        position: relative;
+      }
+      &__ownership{
+        display: none;
+      }
+  }
+}
+
+@media only screen and (max-width: 500px){
   .sprint-backlog{
       &__preview{
-        display: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
       }
       &__ownership{
         display: none;

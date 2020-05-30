@@ -9,7 +9,7 @@
 </template>
 <script>
 import { Vue, Component } from 'vue-property-decorator';
-import AvatarTalkGuide from '@/components/shared/AvatarTalk/AvatarTalkGuide.vue';
+import AvatarTalkGuide from '@/components/AvatarTalk/AvatarTalkGuide.vue';
 @Component({
   components: { AvatarTalkGuide }
 })

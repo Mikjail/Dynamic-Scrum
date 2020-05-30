@@ -1,18 +1,18 @@
 <template>
   <item-description
   customWidth="388"
-  mainTitle="Sprint Planning"
+  :mainTitle="$t('events_sprint-planning')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
         <div class="d-flex flex-column sprint-planning__preview">
           <h5 class="sprint-planning__preview__item">
-            8hs for one-month sprint
+            {{$t('sprint-planning__event-time')}}
           </h5>
           <img src="@/assets/sprint-planning/sprint_planning.svg"
               alt=""
               class="sprint-planning__preview__item">
           <h5 class="sprint-planning__preview__item">
-            Answer
+            {{$t('answer')}}
           </h5>
           <img src="@/assets/two_arrows.svg"
             alt=""
@@ -22,14 +22,14 @@
               @click="topicSelected='what'"
               :class="isActive('what')">
               <h5>
-                 What can be done?
+                 {{$t('sprint-planning_what_title')}}
             </h5>
             </a>
             <a href="javascript:void(0)"
               @click="topicSelected = 'how'"
               :class="isActive('how')">
               <h5>
-                How will the chosen work get done?
+                {{$t('sprint-planning_how_title')}}
               </h5>
             </a>
           </div>
@@ -41,7 +41,7 @@
             :class="isActive('goal')"
             class="sprint-planning__preview__item">
             <h5>
-              Sprint Goal
+              {{$t('sprint-planning_goal_title')}}
             </h5>
           </a>
         </div>
@@ -59,8 +59,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
-import RequirementUnit from '@/components/shared/RequirementUnit/RequirementUnit.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
+import RequirementUnit from '@/components/RequirementUnit/RequirementUnit.vue';
 @Component({
   components: {
     ItemDescription,
@@ -160,6 +160,20 @@ h5 {
     h4 {
       margin-bottom: 20px;
       @include main-title-font;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px){
+ .sprint-planning {
+    &__preview {
+      &__item{
+        &:last-child{
+          h5 {
+            width: 150px !important;
+          }
+        }
+      }
     }
   }
 }

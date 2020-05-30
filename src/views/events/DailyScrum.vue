@@ -1,44 +1,44 @@
 <template>
   <item-description
   customWidth="385"
-  mainTitle="Daily Scrum"
+  :mainTitle="$t('events_daily-scrum')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
         <div class="d-flex flex-column daily-scrum__preview">
           <h5 class="daily-scrum__preview__item">
-            15min every 24hs
+            {{$t('daily-scrum_event-time')}}
           </h5>
           <img src="@/assets/daily-scrum/daily_icon.svg"
               alt=""
               class="daily-scrum__preview__item">
           <h5 class="daily-scrum__preview__item">
-            Answer
+            {{$t('answer')}}
           </h5>
           <img src="@/assets/three_v-arrows.svg"
             alt=""
             class="daily-scrum__preview__item">
           <div class="d-flex justify-content-center daily-scrum__preview__item">
             <h5>
-                What did I do yesterday ?
+              {{$t('daily-scrum_what-did')}}
             </h5>
             <h5>
-              What will I do today ?
+              {{$t('daily-scrum_what-will')}}
             </h5>
             <h5>
-              Do I see any impediment ?
+              {{$t('daily-scrum_impediments')}}
             </h5>
           </div>
           <img class="daily-scrum__preview__item"
             src="@/assets/arrow_down.svg"
             alt="">
             <h5 class="daily-scrum__preview__item">
-              Inspect and Adapt
+              {{$t('inspect-adapt')}}
             </h5>
           <img class="daily-scrum__preview__item"
             src="@/assets/arrow_down.svg"
             alt="">
             <h5>
-              Sprint Goal
+              {{$t('sprint-goal')}}
             </h5>
         </div>
     </template>
@@ -54,8 +54,8 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
-import RequirementUnit from '@/components/shared/RequirementUnit/RequirementUnit.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
+import RequirementUnit from '@/components/RequirementUnit/RequirementUnit.vue';
 @Component({
   components: {
     ItemDescription,
@@ -116,6 +116,18 @@ h5 {
     h4 {
       margin-bottom: 20px;
       @include main-title-font;
+    }
+  }
+}
+
+@media only screen and (max-width: 500px){
+.daily-scrum{
+  &__preview {
+      &__item {
+        h5 {
+          flex-basis: 33.33%
+        }
+      }
     }
   }
 }

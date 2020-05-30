@@ -1,14 +1,14 @@
 <template>
   <item-description
-  mainTitle="Product Backlog"
+  :mainTitle="$t('artifact_product-backlog')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
     <div class="d-flex flex-column align-items-center product-backlog__preview">
         <div class="product-backlog__preview__ownership">
-          <img src="@/assets/product-backlog/ownership.svg" alt="">
+          <img :src="require(`@/assets/product-backlog/${$t('ownership_img')}`)" alt="">
         </div>
         <img class="product-backlog__preview__panel"
-        src="@/assets/product-backlog/product_backlog_panel.svg" alt="">
+          :src="require(`@/assets/product-backlog/${$t('product-backlog_img')}`)" alt="">
     </div>
     </template>
     <template v-slot:item-description>
@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
 @Component({
   components: {
     ItemDescription

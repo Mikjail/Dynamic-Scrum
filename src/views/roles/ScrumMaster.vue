@@ -8,31 +8,32 @@
         src="@/assets/scrum-master/scrum_master_prev.svg" alt="">
         <div class="d-flex flex-column scrum-master__preview__menu">
           <a href="javascript:void(0)"
-            @click="serviceTo = 'product-owner'"
-            :class="isActive('product-owner')"
+            @click="serviceTo = 'roles_product-owner_v2'"
+            :class="isActive('roles_product-owner_v2')"
             class="d-flex flex-column align-items-center scrum-master__preview__menu__item">
             <img src="@/assets/scrum-master/po_icon.svg" alt="">
-            <span> Product Owner </span>
+            <span>{{$t('roles_product-owner_v2')}}</span>
           </a>
           <a href="javascript:void(0)"
-            @click="serviceTo = 'development-team'"
-            :class="isActive('development-team')"
+            @click="serviceTo = 'roles_dev-team_v2'"
+            :class="isActive('roles_dev-team_v2')"
             class="d-flex flex-column align-items-center scrum-master__preview__menu__item">
             <img src="@/assets/scrum-master/dt_icon.svg" alt="">
-            <span>Develpment Team</span>
+            <span>{{$t('roles_dev-team_v2')}}</span>
           </a>
           <a href="javascript:void(0)"
             @click="serviceTo = 'organization'"
             :class="isActive('organization')"
             class="d-flex flex-column align-items-center scrum-master__preview__menu__item">
             <img src="@/assets/scrum-master/org_icon.svg" alt="">
-            <span> Organization</span>
+            <span> {{$t('organization')}}</span>
           </a>
         </div>
       </div>
     </template>
     <template v-slot:item-description>
         <div class="scrum-master__desc">
+          <h4>{{$t(serviceTo)}}</h4>
            <ul>
           <li v-for="(smDesc, index) in scrumMasterDesc[serviceTo]" :key="`pb-${index}`">
             {{$t(smDesc)}}
@@ -45,7 +46,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
 @Component({
   components: {
     ItemDescription
@@ -54,10 +55,10 @@ import ItemDescription from '@/components/shared/ItemDescription/ItemDescription
 export default class ScrumMaster extends Vue {
   avatarMssges = ['avatar_mssge_scrum-master_one', 'avatar_mssge_scrum-master_two', 'avatar_mssge_scrum-master_three']
 
-  serviceTo = 'product-owner';
+  serviceTo = 'roles_product-owner_v2';
 
   scrumMasterDesc = {
-    'product-owner': [
+    'roles_product-owner_v2': [
       'scrum-master_po_one',
       'scrum-master_po_two',
       'scrum-master_po_three',
@@ -66,7 +67,7 @@ export default class ScrumMaster extends Vue {
       'scrum-master_po_six',
       'scrum-master_po_seven'
     ],
-    'development-team': [
+    'roles_dev-team_v2': [
       'scrum-master_dt_one',
       'scrum-master_dt_two',
       'scrum-master_dt_three',
@@ -88,7 +89,7 @@ export default class ScrumMaster extends Vue {
 }
 </script>
 <style lang="scss">
-.scrum-master{
+.scrum-master {
   &__preview {
     width: 340px;
     > img {
@@ -119,9 +120,26 @@ export default class ScrumMaster extends Vue {
     }
   }
   &__desc{
+    h4 {
+      margin-bottom: 20px;
+      @include main-title-font;
+    }
     ul {
       padding-left:5px;
     }
+  }
+}
+
+@media only screen and (max-width: 1000px){
+  .scrum-master {
+      &__preview{
+        &> img {
+          margin-top: 0;
+        }
+        &__menu{
+          margin-top: 62px
+        }
+      }
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <item-description
-  mainTitle="Development Team"
+  :mainTitle="$t('roles_dev-team')"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
       <div class="d-flex justify-content-end dev-team__preview">
@@ -9,15 +9,15 @@
         <div class="d-flex flex-column dev-team__preview__menu">
           <div  class="d-flex flex-column align-items-center dev-team__preview__menu__item">
             <img src="@/assets/dev-team/sprint_backlog_icon.svg" alt="">
-            <span> Sprint Backlog </span>
+            <span>{{$t('artifact_sprint-backlog')}}</span>
           </div>
           <div  class="d-flex flex-column align-items-center dev-team__preview__menu__item">
             <span>3 - 9</span>
-            <span>per team</span>
+            <span>{{$t('per-team')}}</span>
           </div>
           <div  class="d-flex flex-column align-items-center dev-team__preview__menu__item">
             <img src="@/assets/product-increment/increment_icon.svg" alt="">
-            <span>Increment</span>
+            <span>{{$t('artifact_increment')}}</span>
           </div>
         </div>
       </div>
@@ -38,7 +38,7 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator';
-import ItemDescription from '@/components/shared/ItemDescription/ItemDescription.vue';
+import ItemDescription from '@/components/ItemDescription/ItemDescription.vue';
 @Component({
   components: {
     ItemDescription
@@ -96,6 +96,7 @@ export default class DevTeam extends Vue {
   .dev-team{
       &__preview{
         display: none;
+        justify-content: center !important;
       }
       &__ownership{
         display: none;
