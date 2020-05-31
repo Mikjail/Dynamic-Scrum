@@ -3,10 +3,13 @@
   mainTitle="Scrum Master"
   :avatarMssges="avatarMssges">
     <template v-slot:item-preview>
-      <div class="d-flex justify-content-end scrum-master__preview">
+      <div class="d-flex flex-column align-items-center scrum-master__preview">
+        <h5>1 {{$t('per-team')}}!</h5>
         <img
         src="@/assets/scrum-master/scrum_master_prev.svg" alt="">
-        <div class="d-flex flex-column scrum-master__preview__menu">
+        <h5>Service to</h5>
+        <img src="@/assets/three_v-arrows.svg" alt="">
+        <div class="d-flex scrum-master__preview__menu">
           <a href="javascript:void(0)"
             @click="serviceTo = 'roles_product-owner_v2'"
             :class="isActive('roles_product-owner_v2')"
@@ -94,15 +97,17 @@ export default class ScrumMaster extends Vue {
     width: 340px;
     > img {
       margin-top: 30px;
+      margin-bottom: 30px;
     }
-    &__menu{
-      margin-left: 24px;
-      margin-top: 80px;
+    &__menu {
+      width: 100%;
+      align-items: flex-end;
       &__item {
         z-index: 900;
         font-size: 14px;
         padding-bottom: 2px;
         color:$secondary;
+        flex-basis: 33.33%;
         &.active{
           padding-bottom: 0px;
           border-bottom: 2px solid $primary;
@@ -115,7 +120,6 @@ export default class ScrumMaster extends Vue {
         img {
           display: block;
         }
-        margin-bottom: 70px;
       }
     }
   }
@@ -132,14 +136,21 @@ export default class ScrumMaster extends Vue {
 
 @media only screen and (max-width: 1000px){
   .scrum-master {
-      &__preview{
-        &> img {
-          margin-top: 0;
-        }
-        &__menu{
-          margin-top: 62px
+    &__preview{
+      &__menu{
+        &__item{
+          flex-direction: column-reverse !important;
+          span{
+            // display:none;
+          }
         }
       }
+    }
+    &__desc{
+      ul{
+       padding-left:24px;
+      }
+    }
   }
 }
 </style>
