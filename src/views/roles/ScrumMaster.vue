@@ -94,7 +94,7 @@ export default class ScrumMaster extends Vue {
 <style lang="scss">
 .scrum-master {
   &__preview {
-    width: 340px;
+    width: 100%;
     > img {
       margin-top: 30px;
       margin-bottom: 30px;
@@ -140,8 +140,12 @@ export default class ScrumMaster extends Vue {
       &__menu{
         &__item{
           flex-direction: column-reverse !important;
-          span{
-            // display:none;
+          &.active{
+            border-bottom: 0 solid $primary;
+            img {
+                  transition: 0.2s;
+              border-bottom: 2px solid $primary;
+            }
           }
         }
       }
