@@ -1,4 +1,8 @@
+# DEMO
+https://mikjail.github.io/dynamic-scrum-demo/
+
 # dynamic-scrum
+Dynamic Scrum is an alternative way to lean about Scrum!
 
 ## Project setup
 ```
