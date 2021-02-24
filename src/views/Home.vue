@@ -125,6 +125,8 @@ body {
     height: 64px;
     img {
       position: relative;
+      flex-basis: 33.33%;
+      height: 50px;
       &:first-child {
         flex-basis: 50%;
       }
@@ -137,7 +139,6 @@ body {
         text-align: right;
         margin-left: 57%;
       }
-      flex-basis: 33.33%;
     }
   }
   &__main-menu {
